@@ -34,6 +34,20 @@ func TestSubdomainResolver(t *testing.T) {
 		t.Fatal(err)
 	}
 
+	t.Run("supportsInterface", func(t *testing.T) {
+		for _, iID := range [][4]byte{
+			{0x01, 0xff, 0xc9, 0xa7}, // supportsInterface
+			{0x3b, 0x3b, 0x57, 0xde}, // addr
+			{0x59, 0xd1, 0xd4, 0x3c}, // text
+		} {
+			if ok, err := resolver.SupportsInterface(&bind.CallOpts{}, iID); err != nil {
+				t.Fatal(err)
+			} else if !ok {
+				t.Errorf("resolver should support interface: %x", iID)
+			}
+		}
+	})
+
 	t.Run("addr", func(t *testing.T) {
 		if addr, err := resolver.Addr(&bind.CallOpts{}, node); err != nil {
 			t.Fatal(err)
