@@ -2,6 +2,7 @@
 pragma solidity ^0.8.4;
 
 import "./openzeppelin/contracts/utils/introspection/IERC165.sol";
+import "./ens-contracts/contracts/registry/ENS.sol";
 import "./ens-contracts/contracts/resolvers/profiles/IABIResolver.sol";
 import "./ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol";
 import "./ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol";
@@ -14,40 +15,57 @@ import "./ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol";
 import "./ens-contracts/contracts/resolvers/profiles/ITextResolver.sol";
 import "./ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol";
 
+// TODO docs
 interface Resolver is
     IERC165,
-    IABIResolver,
-    IAddressResolver,
-    IAddrResolver,
-    IContentHashResolver,
-    IDNSRecordResolver,
-    IDNSZoneResolver,
-    IInterfaceResolver,
-    INameResolver,
-    IPubkeyResolver,
+    /* IABIResolver, */
+    /* IAddressResolver, */
+    /* IAddrResolver, */
+    /* IContentHashResolver, */
+    /* IDNSRecordResolver, */
+    /* IDNSZoneResolver, */
+    /* IInterfaceResolver, */
+    /* INameResolver, */
+    /* IPubkeyResolver, */
     ITextResolver {}
 
+/**
+ * @title Catch-all ENSIP-10 resolver.
+ * @author royalfork.eth
+ * @notice Resolver shim which proxies all resolver functions for any
+ *         subdomain of a node to a set resolver.
+ */
 contract CatchallResolver is IExtendedResolver, Resolver {
-	Resolver public parent;
-	bytes32 public parentNode;
+    ENS public immutable registry;
 
-    constructor(Resolver _parent, bytes32 _node) {
-		parent = _parent;
-		parentNode = _node;
+    mapping(bytes32=>Resolver) resolvers;
+
+    constructor(address _registry) {
+        registry = ENS(_registry);
     }
 
-	// resolve only works with resolver functions where the first argument is a bytes32 node.
-    function resolve(bytes calldata, bytes memory data) external override view returns(bytes memory) {
-		// Replace node argument in data with parentNode
-		for (uint8 i = 0; i < 32; i++) {
-			data[i+4] = parentNode[i];
-		}
+	// TODO docs
+	// TODO tests
+	function setResolver(bytes32 _node, Resolver _resolver) public {
+        address owner = registry.owner(_node);
+        require(owner == msg.sender || registry.isApprovedForAll(owner, msg.sender));
+		resolvers[_node] = _resolver;
+	}
 
-		(bool ok, bytes memory out) = address(parent).staticcall(data);
-		if (!ok) {
-			revert("invalid call");
-		}
-		return out;
+	// resolve only works with resolver functions where the first argument is a bytes32 node.
+    function resolve(bytes calldata name, bytes memory data) external override view returns(bytes memory) {
+		// Return parentNode, parentResolver
+
+		// Replace node argument in data with parentNode
+		/* for (uint8 i = 0; i < 32; i++) { */
+		/* 	data[i+4] = parentNode[i]; */
+		/* } */
+
+		/* (bool ok, bytes memory out) = address(parent).staticcall(data); */
+		/* if (!ok) { */
+		/* 	revert("invalid call"); */
+		/* } */
+		/* return out; */
     }
 
     function supportsInterface(bytes4 interfaceID) public pure override returns(bool) {
@@ -66,34 +84,74 @@ contract CatchallResolver is IExtendedResolver, Resolver {
     }
 
 	// Resolver functions are proxied to parent resolver.
-	function ABI(bytes32 node, uint256 contentTypes) external view returns (uint256, bytes memory) {
-		return parent.ABI(node, contentTypes);
+	// TODO convert all to "override" functions.
+	/* function ABI(bytes32 node, uint256 contentTypes) external view returns (uint256, bytes memory) { */
+	/* 	return parent.ABI(node, contentTypes); */
+	/* } */
+	/* function addr(bytes32 node) external view returns (address payable) { */
+	/* 	return parent.addr(node); */
+	/* } */
+	/* function addr(bytes32 node, uint coinType) external view returns(bytes memory) { */
+	/* 	return parent.addr(node, coinType); */
+	/* } */
+	/* function contenthash(bytes32 node) external view returns (bytes memory) { */
+	/* 	return parent.contenthash(node); */
+	/* } */
+	/* function dnsRecord(bytes32 node, bytes32 _name, uint16 resource) external view returns (bytes memory) { */
+	/* 	return parent.dnsRecord(node, _name, resource); */
+	/* } */
+	/* function interfaceImplementer(bytes32 node, bytes4 interfaceID) external view returns (address) { */
+	/* 	return parent.interfaceImplementer(node, interfaceID); */
+	/* } */
+	/* function name(bytes32 node) external view returns (string memory) { */
+	/* 	return parent.name(node); */
+	/* } */
+	/* function pubkey(bytes32 node) external view returns (bytes32 x, bytes32 y) { */
+	/* 	return parent.pubkey(node); */
+	/* } */
+	function text(bytes32 node, string calldata key) external override view returns (string memory) {
+		return resolvers[node].text(node, key);
 	}
-	function addr(bytes32 node) external view returns (address payable) {
-		return parent.addr(node);
+	/* function zonehash(bytes32 node) external view returns (bytes memory) { */
+	/* 	return parent.zonehash(node); */
+	/* } */
+
+    /**
+     * @notice Returns ENSIP-10 resolver for name.
+     * @param name The name to resolve, in normalised and DNS-encoded form (eg: sub.example.eth)
+     * @return resolverAddr Found resolver for name.
+	 * @return resolverOwner DNS-encoded name which set the resolver (eg: example.eth).
+	 */
+	function resolver(bytes calldata name) public view returns(address, bytes memory) {
+		(address r,uint256 o,,) = resolver(name, 0);
+		return (r, name[o:]);
 	}
-	function addr(bytes32 node, uint coinType) external view returns(bytes memory) {
-		return parent.addr(node, coinType);
-	}
-	function contenthash(bytes32 node) external view returns (bytes memory) {
-		return parent.contenthash(node);
-	}
-	function dnsRecord(bytes32 node, bytes32 _name, uint16 resource) external view returns (bytes memory) {
-		return parent.dnsRecord(node, _name, resource);
-	}
-	function interfaceImplementer(bytes32 node, bytes4 interfaceID) external view returns (address) {
-		return parent.interfaceImplementer(node, interfaceID);
-	}
-	function name(bytes32 node) external view returns (string memory) {
-		return parent.name(node);
-	}
-	function pubkey(bytes32 node) external view returns (bytes32 x, bytes32 y) {
-		return parent.pubkey(node);
-	}
-	function text(bytes32 node, string calldata key) external view returns (string memory) {
-		return parent.text(node, key);
-	}
-	function zonehash(bytes32 node) external view returns (bytes memory) {
-		return parent.zonehash(node);
-	}
+
+    /**
+     * @dev Performs recursive ENSIP-10 lookup for a catchall resolver.
+     * @param name The name to resolve, in normalised and DNS-encoded
+     *        form (eg: sub.example.eth)
+     * @param offset The offset within name on which a catchall
+     *        resolver lookup is performed.
+     * @return resolverAddr Found resolver for name.
+     * @return resolverNameOffset Domain at this offset within name
+     *         which set resolverAddr (eg: offset of example.eth).
+     * @return resolverNode Namehash of name[resolverNameOffset:].
+     * @return node Namehash of name.
+     */
+    function resolver(bytes calldata name, uint256 offset) internal view returns(address, uint256, bytes32, bytes32) {
+        uint256 labelLength = uint256(uint8(name[offset]));
+        if(labelLength == 0) {
+            return (address(0), name.length, bytes32(0), bytes32(0));
+        }
+        uint256 nextLabel = offset + labelLength + 1;
+        bytes32 labelHash = keccak256(name[offset + 1: nextLabel]);
+        (address r, uint256 roffset, bytes32 rnode, bytes32 parentnode) = resolver(name, nextLabel);
+        bytes32 node = keccak256(abi.encodePacked(parentnode, labelHash));
+        address newr = address(resolvers[node]);
+        if(newr != address(0)) {
+            return (newr, offset, node, node);
+        }
+        return (r, roffset, rnode, node);
+    }
 }

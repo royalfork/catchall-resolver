@@ -30,24 +30,16 @@ var (
 
 // CatchallResolverMetaData contains all meta data concerning the CatchallResolver contract.
 var CatchallResolverMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[{\"internalType\":\"contractResolver\",\"name\":\"_parent\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"_node\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"contentType\",\"type\":\"uint256\"}],\"name\":\"ABIChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"a\",\"type\":\"address\"}],\"name\":\"AddrChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"coinType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"newAddress\",\"type\":\"bytes\"}],\"name\":\"AddressChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"hash\",\"type\":\"bytes\"}],\"name\":\"ContenthashChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"name\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"resource\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"record\",\"type\":\"bytes\"}],\"name\":\"DNSRecordChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"name\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"resource\",\"type\":\"uint16\"}],\"name\":\"DNSRecordDeleted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"DNSZoneCleared\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"lastzonehash\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"zonehash\",\"type\":\"bytes\"}],\"name\":\"DNSZonehashChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"implementer\",\"type\":\"address\"}],\"name\":\"InterfaceChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"NameChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"x\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"y\",\"type\":\"bytes32\"}],\"name\":\"PubkeyChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"string\",\"name\":\"indexedKey\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"}],\"name\":\"TextChanged\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"contentTypes\",\"type\":\"uint256\"}],\"name\":\"ABI\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"addr\",\"outputs\":[{\"internalType\":\"addresspayable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"coinType\",\"type\":\"uint256\"}],\"name\":\"addr\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"contenthash\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"_name\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"resource\",\"type\":\"uint16\"}],\"name\":\"dnsRecord\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"interfaceImplementer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"parent\",\"outputs\":[{\"internalType\":\"contractResolver\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"parentNode\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"pubkey\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"x\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"y\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"resolve\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"}],\"name\":\"text\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"zonehash\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+	ABI: "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_registry\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"string\",\"name\":\"indexedKey\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"}],\"name\":\"TextChanged\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"contractENS\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"name\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"resolve\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"name\",\"type\":\"bytes\"}],\"name\":\"resolver\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_node\",\"type\":\"bytes32\"},{\"internalType\":\"contractResolver\",\"name\":\"_resolver\",\"type\":\"address\"}],\"name\":\"setResolver\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"}],\"name\":\"text\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
 	Sigs: map[string]string{
-		"2203ab56": "ABI(bytes32,uint256)",
-		"3b3b57de": "addr(bytes32)",
-		"f1cb7e06": "addr(bytes32,uint256)",
-		"bc1c58d1": "contenthash(bytes32)",
-		"a8fa5682": "dnsRecord(bytes32,bytes32,uint16)",
-		"124a319c": "interfaceImplementer(bytes32,bytes4)",
-		"691f3431": "name(bytes32)",
-		"60f96a8f": "parent()",
-		"f3068a00": "parentNode()",
-		"c8690233": "pubkey(bytes32)",
+		"7b103999": "registry()",
 		"9061b923": "resolve(bytes,bytes)",
+		"79e062f6": "resolver(bytes)",
+		"1896f70a": "setResolver(bytes32,address)",
 		"01ffc9a7": "supportsInterface(bytes4)",
 		"59d1d43c": "text(bytes32,string)",
-		"5c98042b": "zonehash(bytes32)",
 	},
-	Bin: "0x608060405234801561001057600080fd5b50604051610f5b380380610f5b83398101604081905261002f91610058565b600080546001600160a01b0319166001600160a01b039390931692909217909155600155610092565b6000806040838503121561006b57600080fd5b82516001600160a01b038116811461008257600080fd5b6020939093015192949293505050565b610eba806100a16000396000f3fe608060405234801561001057600080fd5b50600436106100ea5760003560e01c8063691f34311161008c578063bc1c58d111610066578063bc1c58d1146101f5578063c869023314610208578063f1cb7e0614610230578063f3068a001461024357600080fd5b8063691f3431146101bc5780639061b923146101cf578063a8fa5682146101e257600080fd5b80633b3b57de116100c85780633b3b57de1461016357806359d1d43c146101765780635c98042b1461019657806360f96a8f146101a957600080fd5b806301ffc9a7146100ef578063124a319c146101175780632203ab5614610142575b600080fd5b6101026100fd366004610961565b61025a565b60405190151581526020015b60405180910390f35b61012a61012536600461097c565b61039f565b6040516001600160a01b03909116815260200161010e565b6101556101503660046109a8565b610424565b60405161010e929190610a26565b61012a610171366004610a3f565b6104aa565b610189610184366004610a9a565b610518565b60405161010e9190610ae6565b6101896101a4366004610a3f565b61059a565b60005461012a906001600160a01b031681565b6101896101ca366004610a3f565b61060d565b6101896101dd366004610b68565b61067f565b6101896101f0366004610c14565b6107a0565b610189610203366004610a3f565b610823565b61021b610216366004610a3f565b610855565b6040805192835260208301919091520161010e565b61018961023e3660046109a8565b6108cb565b61024c60015481565b60405190815260200161010e565b60006001600160e01b03198216639061b92360e01b148061028b57506001600160e01b031982166301ffc9a760e01b145b806102a657506001600160e01b03198216631101d5ab60e11b145b806102c157506001600160e01b031982166378e5bf0360e11b145b806102dc57506001600160e01b03198216631d9dabef60e11b145b806102f757506001600160e01b0319821663bc1c58d160e01b145b8061031257506001600160e01b0319821663547d2b4160e11b145b8061032d57506001600160e01b03198216635c98042b60e01b145b8061034857506001600160e01b031982166304928c6760e21b145b8061036357506001600160e01b0319821663691f343160e01b145b8061037e57506001600160e01b0319821663c869023360e01b145b8061039957506001600160e01b03198216631674750f60e21b145b92915050565b600080546040516304928c6760e21b8152600481018590526001600160e01b0319841660248201526001600160a01b039091169063124a319c90604401602060405180830381865afa1580156103f9573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061041d9190610c6c565b9392505050565b60008054604051631101d5ab60e11b815260048101859052602481018490526060916001600160a01b031690632203ab5690604401600060405180830381865afa158015610476573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261049e9190810190610cd9565b915091505b9250929050565b60008054604051631d9dabef60e11b8152600481018490526001600160a01b0390911690633b3b57de90602401602060405180830381865afa1580156104f4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103999190610c6c565b600054604051631674750f60e21b81526060916001600160a01b0316906359d1d43c9061054d90879087908790600401610d20565b600060405180830381865afa15801561056a573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f191682016040526105929190810190610d56565b949350505050565b600054604051635c98042b60e01b8152600481018390526060916001600160a01b031690635c98042b906024015b600060405180830381865afa1580156105e5573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f191682016040526103999190810190610d9f565b60005460405163691f343160e01b8152600481018390526060916001600160a01b03169063691f343190602401600060405180830381865afa158015610657573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f191682016040526103999190810190610d56565b606060005b60208160ff1610156106f3576001548160ff16602081106106a7576106a7610dd4565b1a60f81b836106b7836004610e00565b60ff16815181106106ca576106ca610dd4565b60200101906001600160f81b031916908160001a905350806106eb81610e25565b915050610684565b506000805460405182916001600160a01b031690610712908690610e44565b600060405180830381855afa9150503d806000811461074d576040519150601f19603f3d011682016040523d82523d6000602084013e610752565b606091505b5091509150816107975760405162461bcd60e51b815260206004820152600c60248201526b1a5b9d985b1a590818d85b1b60a21b604482015260640160405180910390fd5b95945050505050565b60005460405163547d2b4160e11b8152600481018590526024810184905261ffff831660448201526060916001600160a01b03169063a8fa568290606401600060405180830381865afa1580156107fb573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f191682016040526105929190810190610d9f565b60005460405163bc1c58d160e01b8152600481018390526060916001600160a01b03169063bc1c58d1906024016105c8565b6000805460405163c869023360e01b81526004810184905282916001600160a01b03169063c8690233906024016040805180830381865afa15801561089e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108c29190610e60565b91509150915091565b6000546040516378e5bf0360e11b815260048101849052602481018390526060916001600160a01b03169063f1cb7e0690604401600060405180830381865afa15801561091c573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261041d9190810190610d9f565b80356001600160e01b03198116811461095c57600080fd5b919050565b60006020828403121561097357600080fd5b61041d82610944565b6000806040838503121561098f57600080fd5b8235915061099f60208401610944565b90509250929050565b600080604083850312156109bb57600080fd5b50508035926020909101359150565b60005b838110156109e55781810151838201526020016109cd565b838111156109f4576000848401525b50505050565b60008151808452610a128160208601602086016109ca565b601f01601f19169290920160200192915050565b82815260406020820152600061059260408301846109fa565b600060208284031215610a5157600080fd5b5035919050565b60008083601f840112610a6a57600080fd5b50813567ffffffffffffffff811115610a8257600080fd5b6020830191508360208285010111156104a357600080fd5b600080600060408486031215610aaf57600080fd5b83359250602084013567ffffffffffffffff811115610acd57600080fd5b610ad986828701610a58565b9497909650939450505050565b60208152600061041d60208301846109fa565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff81118282101715610b3857610b38610af9565b604052919050565b600067ffffffffffffffff821115610b5a57610b5a610af9565b50601f01601f191660200190565b600080600060408486031215610b7d57600080fd5b833567ffffffffffffffff80821115610b9557600080fd5b610ba187838801610a58565b90955093506020860135915080821115610bba57600080fd5b508401601f81018613610bcc57600080fd5b8035610bdf610bda82610b40565b610b0f565b818152876020838501011115610bf457600080fd5b816020840160208301376000602083830101528093505050509250925092565b600080600060608486031215610c2957600080fd5b8335925060208401359150604084013561ffff81168114610c4957600080fd5b809150509250925092565b6001600160a01b0381168114610c6957600080fd5b50565b600060208284031215610c7e57600080fd5b815161041d81610c54565b6000610c97610bda84610b40565b9050828152838383011115610cab57600080fd5b61041d8360208301846109ca565b600082601f830112610cca57600080fd5b61041d83835160208501610c89565b60008060408385031215610cec57600080fd5b82519150602083015167ffffffffffffffff811115610d0a57600080fd5b610d1685828601610cb9565b9150509250929050565b83815260406020820152816040820152818360608301376000818301606090810191909152601f909201601f1916010192915050565b600060208284031215610d6857600080fd5b815167ffffffffffffffff811115610d7f57600080fd5b8201601f81018413610d9057600080fd5b61059284825160208401610c89565b600060208284031215610db157600080fd5b815167ffffffffffffffff811115610dc857600080fd5b61059284828501610cb9565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b600060ff821660ff84168060ff03821115610e1d57610e1d610dea565b019392505050565b600060ff821660ff8103610e3b57610e3b610dea565b60010192915050565b60008251610e568184602087016109ca565b9190910192915050565b60008060408385031215610e7357600080fd5b50508051602090910151909290915056fea26469706673582212209495e69023ed83a5a1d000582229067ea55840da7a20b274de283fbb64d00d1764736f6c634300080d0033",
+	Bin: "0x60a060405234801561001057600080fd5b50604051610b39380380610b3983398101604081905261002f91610040565b6001600160a01b0316608052610070565b60006020828403121561005257600080fd5b81516001600160a01b038116811461006957600080fd5b9392505050565b608051610aa16100986000396000818160ea0152818161029901526103450152610aa16000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806301ffc9a7146100675780631896f70a1461008f57806359d1d43c146100a457806379e062f6146100c45780637b103999146100e55780639061b92314610124575b600080fd5b61007a610075366004610612565b61013b565b60405190151581526020015b60405180910390f35b6100a261009d36600461065b565b610280565b005b6100b76100b23660046106cd565b6103e8565b6040516100869190610775565b6100d76100d2366004610788565b610477565b6040516100869291906107ca565b61010c7f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b039091168152602001610086565b6100b761013236600461085d565b60609392505050565b60006001600160e01b03198216639061b92360e01b148061016c57506001600160e01b031982166301ffc9a760e01b145b8061018757506001600160e01b03198216631101d5ab60e11b145b806101a257506001600160e01b031982166378e5bf0360e11b145b806101bd57506001600160e01b03198216631d9dabef60e11b145b806101d857506001600160e01b0319821663bc1c58d160e01b145b806101f357506001600160e01b0319821663547d2b4160e11b145b8061020e57506001600160e01b03198216635c98042b60e01b145b8061022957506001600160e01b031982166304928c6760e21b145b8061024457506001600160e01b0319821663691f343160e01b145b8061025f57506001600160e01b0319821663c869023360e01b145b8061027a57506001600160e01b03198216631674750f60e21b145b92915050565b6040516302571be360e01b8152600481018390526000907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906302571be390602401602060405180830381865afa1580156102e8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061030c9190610909565b90506001600160a01b0381163314806103b0575060405163e985e9c560e01b81526001600160a01b0382811660048301523360248301527f0000000000000000000000000000000000000000000000000000000000000000169063e985e9c590604401602060405180830381865afa15801561038c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103b09190610926565b6103b957600080fd5b5060009182526020829052604090912080546001600160a01b0319166001600160a01b03909216919091179055565b60008381526020819052604090819020549051631674750f60e21b81526060916001600160a01b0316906359d1d43c9061042a90879087908790600401610948565b600060405180830381865afa158015610447573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261046f919081019061097e565b949350505050565b6000606060008061048a868660006104e7565b50919350915082905061049f8683818a6109f5565b81818080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250959950919750505050505050505b9250929050565b600080600080600087878781811061050157610501610a1f565b919091013560f81c9150506000819003610528575060009350859250839150819050610609565b60006105348288610a35565b61053f906001610a35565b9050600089896105508a6001610a35565b61055c928592906109f5565b60405161056a929190610a5b565b604051809103902090506000806000806105858e8e886104e7565b9350935093509350600081866040516020016105ab929190918252602082015260400190565b60408051601f1981840301815291815281516020928301206000818152928390529120549091506001600160a01b031680156105f8579b508c9a5098508897506106099650505050505050565b50939a509198509650909450505050505b93509350935093565b60006020828403121561062457600080fd5b81356001600160e01b03198116811461063c57600080fd5b9392505050565b6001600160a01b038116811461065857600080fd5b50565b6000806040838503121561066e57600080fd5b82359150602083013561068081610643565b809150509250929050565b60008083601f84011261069d57600080fd5b50813567ffffffffffffffff8111156106b557600080fd5b6020830191508360208285010111156104e057600080fd5b6000806000604084860312156106e257600080fd5b83359250602084013567ffffffffffffffff81111561070057600080fd5b61070c8682870161068b565b9497909650939450505050565b60005b8381101561073457818101518382015260200161071c565b83811115610743576000848401525b50505050565b60008151808452610761816020860160208601610719565b601f01601f19169290920160200192915050565b60208152600061063c6020830184610749565b6000806020838503121561079b57600080fd5b823567ffffffffffffffff8111156107b257600080fd5b6107be8582860161068b565b90969095509350505050565b6001600160a01b038316815260406020820181905260009061046f90830184610749565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff8111828210171561082d5761082d6107ee565b604052919050565b600067ffffffffffffffff82111561084f5761084f6107ee565b50601f01601f191660200190565b60008060006040848603121561087257600080fd5b833567ffffffffffffffff8082111561088a57600080fd5b6108968783880161068b565b909550935060208601359150808211156108af57600080fd5b508401601f810186136108c157600080fd5b80356108d46108cf82610835565b610804565b8181528760208385010111156108e957600080fd5b816020840160208301376000602083830101528093505050509250925092565b60006020828403121561091b57600080fd5b815161063c81610643565b60006020828403121561093857600080fd5b8151801515811461063c57600080fd5b83815260406020820152816040820152818360608301376000818301606090810191909152601f909201601f1916010192915050565b60006020828403121561099057600080fd5b815167ffffffffffffffff8111156109a757600080fd5b8201601f810184136109b857600080fd5b80516109c66108cf82610835565b8181528560208385010111156109db57600080fd5b6109ec826020830160208601610719565b95945050505050565b60008085851115610a0557600080fd5b83861115610a1257600080fd5b5050820193919092039150565b634e487b7160e01b600052603260045260246000fd5b60008219821115610a5657634e487b7160e01b600052601160045260246000fd5b500190565b818382376000910190815291905056fea2646970667358221220f13b479dfb141c8b8be473a452664f372695081d51e12982bb8d01407d1edafc64736f6c634300080d0033",
 }
 
 // CatchallResolverABI is the input ABI used to generate the binding from.
@@ -63,7 +55,7 @@ var CatchallResolverFuncSigs = CatchallResolverMetaData.Sigs
 var CatchallResolverBin = CatchallResolverMetaData.Bin
 
 // DeployCatchallResolver deploys a new Ethereum contract, binding an instance of CatchallResolver to it.
-func DeployCatchallResolver(auth *bind.TransactOpts, backend bind.ContractBackend, _parent common.Address, _node [32]byte) (common.Address, *types.Transaction, *CatchallResolver, error) {
+func DeployCatchallResolver(auth *bind.TransactOpts, backend bind.ContractBackend, _registry common.Address) (common.Address, *types.Transaction, *CatchallResolver, error) {
 	parsed, err := CatchallResolverMetaData.GetAbi()
 	if err != nil {
 		return common.Address{}, nil, nil, err
@@ -72,7 +64,7 @@ func DeployCatchallResolver(auth *bind.TransactOpts, backend bind.ContractBacken
 		return common.Address{}, nil, nil, errors.New("GetABI returned nil")
 	}
 
-	address, tx, contract, err := bind.DeployContract(auth, *parsed, common.FromHex(CatchallResolverBin), backend, _parent, _node)
+	address, tx, contract, err := bind.DeployContract(auth, *parsed, common.FromHex(CatchallResolverBin), backend, _registry)
 	if err != nil {
 		return common.Address{}, nil, nil, err
 	}
@@ -221,360 +213,98 @@ func (_CatchallResolver *CatchallResolverTransactorRaw) Transact(opts *bind.Tran
 	return _CatchallResolver.Contract.contract.Transact(opts, method, params...)
 }
 
-// ABI is a free data retrieval call binding the contract method 0x2203ab56.
+// Registry is a free data retrieval call binding the contract method 0x7b103999.
 //
-// Solidity: function ABI(bytes32 node, uint256 contentTypes) view returns(uint256, bytes)
-func (_CatchallResolver *CatchallResolverCaller) ABI(opts *bind.CallOpts, node [32]byte, contentTypes *big.Int) (*big.Int, []byte, error) {
+// Solidity: function registry() view returns(address)
+func (_CatchallResolver *CatchallResolverCaller) Registry(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "ABI", node, contentTypes)
+	err := _CatchallResolver.contract.Call(opts, &out, "registry")
 
 	if err != nil {
-		return *new(*big.Int), *new([]byte), err
+		return *new(common.Address), err
 	}
 
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Registry is a free data retrieval call binding the contract method 0x7b103999.
+//
+// Solidity: function registry() view returns(address)
+func (_CatchallResolver *CatchallResolverSession) Registry() (common.Address, error) {
+	return _CatchallResolver.Contract.Registry(&_CatchallResolver.CallOpts)
+}
+
+// Registry is a free data retrieval call binding the contract method 0x7b103999.
+//
+// Solidity: function registry() view returns(address)
+func (_CatchallResolver *CatchallResolverCallerSession) Registry() (common.Address, error) {
+	return _CatchallResolver.Contract.Registry(&_CatchallResolver.CallOpts)
+}
+
+// Resolve is a free data retrieval call binding the contract method 0x9061b923.
+//
+// Solidity: function resolve(bytes name, bytes data) view returns(bytes)
+func (_CatchallResolver *CatchallResolverCaller) Resolve(opts *bind.CallOpts, name []byte, data []byte) ([]byte, error) {
+	var out []interface{}
+	err := _CatchallResolver.contract.Call(opts, &out, "resolve", name, data)
+
+	if err != nil {
+		return *new([]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
+
+	return out0, err
+
+}
+
+// Resolve is a free data retrieval call binding the contract method 0x9061b923.
+//
+// Solidity: function resolve(bytes name, bytes data) view returns(bytes)
+func (_CatchallResolver *CatchallResolverSession) Resolve(name []byte, data []byte) ([]byte, error) {
+	return _CatchallResolver.Contract.Resolve(&_CatchallResolver.CallOpts, name, data)
+}
+
+// Resolve is a free data retrieval call binding the contract method 0x9061b923.
+//
+// Solidity: function resolve(bytes name, bytes data) view returns(bytes)
+func (_CatchallResolver *CatchallResolverCallerSession) Resolve(name []byte, data []byte) ([]byte, error) {
+	return _CatchallResolver.Contract.Resolve(&_CatchallResolver.CallOpts, name, data)
+}
+
+// Resolver is a free data retrieval call binding the contract method 0x79e062f6.
+//
+// Solidity: function resolver(bytes name) view returns(address, bytes)
+func (_CatchallResolver *CatchallResolverCaller) Resolver(opts *bind.CallOpts, name []byte) (common.Address, []byte, error) {
+	var out []interface{}
+	err := _CatchallResolver.contract.Call(opts, &out, "resolver", name)
+
+	if err != nil {
+		return *new(common.Address), *new([]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
 	out1 := *abi.ConvertType(out[1], new([]byte)).(*[]byte)
 
 	return out0, out1, err
 
 }
 
-// ABI is a free data retrieval call binding the contract method 0x2203ab56.
+// Resolver is a free data retrieval call binding the contract method 0x79e062f6.
 //
-// Solidity: function ABI(bytes32 node, uint256 contentTypes) view returns(uint256, bytes)
-func (_CatchallResolver *CatchallResolverSession) ABI(node [32]byte, contentTypes *big.Int) (*big.Int, []byte, error) {
-	return _CatchallResolver.Contract.ABI(&_CatchallResolver.CallOpts, node, contentTypes)
+// Solidity: function resolver(bytes name) view returns(address, bytes)
+func (_CatchallResolver *CatchallResolverSession) Resolver(name []byte) (common.Address, []byte, error) {
+	return _CatchallResolver.Contract.Resolver(&_CatchallResolver.CallOpts, name)
 }
 
-// ABI is a free data retrieval call binding the contract method 0x2203ab56.
+// Resolver is a free data retrieval call binding the contract method 0x79e062f6.
 //
-// Solidity: function ABI(bytes32 node, uint256 contentTypes) view returns(uint256, bytes)
-func (_CatchallResolver *CatchallResolverCallerSession) ABI(node [32]byte, contentTypes *big.Int) (*big.Int, []byte, error) {
-	return _CatchallResolver.Contract.ABI(&_CatchallResolver.CallOpts, node, contentTypes)
-}
-
-// Addr is a free data retrieval call binding the contract method 0x3b3b57de.
-//
-// Solidity: function addr(bytes32 node) view returns(address)
-func (_CatchallResolver *CatchallResolverCaller) Addr(opts *bind.CallOpts, node [32]byte) (common.Address, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "addr", node)
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
-}
-
-// Addr is a free data retrieval call binding the contract method 0x3b3b57de.
-//
-// Solidity: function addr(bytes32 node) view returns(address)
-func (_CatchallResolver *CatchallResolverSession) Addr(node [32]byte) (common.Address, error) {
-	return _CatchallResolver.Contract.Addr(&_CatchallResolver.CallOpts, node)
-}
-
-// Addr is a free data retrieval call binding the contract method 0x3b3b57de.
-//
-// Solidity: function addr(bytes32 node) view returns(address)
-func (_CatchallResolver *CatchallResolverCallerSession) Addr(node [32]byte) (common.Address, error) {
-	return _CatchallResolver.Contract.Addr(&_CatchallResolver.CallOpts, node)
-}
-
-// Addr0 is a free data retrieval call binding the contract method 0xf1cb7e06.
-//
-// Solidity: function addr(bytes32 node, uint256 coinType) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCaller) Addr0(opts *bind.CallOpts, node [32]byte, coinType *big.Int) ([]byte, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "addr0", node, coinType)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
-}
-
-// Addr0 is a free data retrieval call binding the contract method 0xf1cb7e06.
-//
-// Solidity: function addr(bytes32 node, uint256 coinType) view returns(bytes)
-func (_CatchallResolver *CatchallResolverSession) Addr0(node [32]byte, coinType *big.Int) ([]byte, error) {
-	return _CatchallResolver.Contract.Addr0(&_CatchallResolver.CallOpts, node, coinType)
-}
-
-// Addr0 is a free data retrieval call binding the contract method 0xf1cb7e06.
-//
-// Solidity: function addr(bytes32 node, uint256 coinType) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCallerSession) Addr0(node [32]byte, coinType *big.Int) ([]byte, error) {
-	return _CatchallResolver.Contract.Addr0(&_CatchallResolver.CallOpts, node, coinType)
-}
-
-// Contenthash is a free data retrieval call binding the contract method 0xbc1c58d1.
-//
-// Solidity: function contenthash(bytes32 node) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCaller) Contenthash(opts *bind.CallOpts, node [32]byte) ([]byte, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "contenthash", node)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
-}
-
-// Contenthash is a free data retrieval call binding the contract method 0xbc1c58d1.
-//
-// Solidity: function contenthash(bytes32 node) view returns(bytes)
-func (_CatchallResolver *CatchallResolverSession) Contenthash(node [32]byte) ([]byte, error) {
-	return _CatchallResolver.Contract.Contenthash(&_CatchallResolver.CallOpts, node)
-}
-
-// Contenthash is a free data retrieval call binding the contract method 0xbc1c58d1.
-//
-// Solidity: function contenthash(bytes32 node) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCallerSession) Contenthash(node [32]byte) ([]byte, error) {
-	return _CatchallResolver.Contract.Contenthash(&_CatchallResolver.CallOpts, node)
-}
-
-// DnsRecord is a free data retrieval call binding the contract method 0xa8fa5682.
-//
-// Solidity: function dnsRecord(bytes32 node, bytes32 _name, uint16 resource) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCaller) DnsRecord(opts *bind.CallOpts, node [32]byte, _name [32]byte, resource uint16) ([]byte, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "dnsRecord", node, _name, resource)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
-}
-
-// DnsRecord is a free data retrieval call binding the contract method 0xa8fa5682.
-//
-// Solidity: function dnsRecord(bytes32 node, bytes32 _name, uint16 resource) view returns(bytes)
-func (_CatchallResolver *CatchallResolverSession) DnsRecord(node [32]byte, _name [32]byte, resource uint16) ([]byte, error) {
-	return _CatchallResolver.Contract.DnsRecord(&_CatchallResolver.CallOpts, node, _name, resource)
-}
-
-// DnsRecord is a free data retrieval call binding the contract method 0xa8fa5682.
-//
-// Solidity: function dnsRecord(bytes32 node, bytes32 _name, uint16 resource) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCallerSession) DnsRecord(node [32]byte, _name [32]byte, resource uint16) ([]byte, error) {
-	return _CatchallResolver.Contract.DnsRecord(&_CatchallResolver.CallOpts, node, _name, resource)
-}
-
-// InterfaceImplementer is a free data retrieval call binding the contract method 0x124a319c.
-//
-// Solidity: function interfaceImplementer(bytes32 node, bytes4 interfaceID) view returns(address)
-func (_CatchallResolver *CatchallResolverCaller) InterfaceImplementer(opts *bind.CallOpts, node [32]byte, interfaceID [4]byte) (common.Address, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "interfaceImplementer", node, interfaceID)
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
-}
-
-// InterfaceImplementer is a free data retrieval call binding the contract method 0x124a319c.
-//
-// Solidity: function interfaceImplementer(bytes32 node, bytes4 interfaceID) view returns(address)
-func (_CatchallResolver *CatchallResolverSession) InterfaceImplementer(node [32]byte, interfaceID [4]byte) (common.Address, error) {
-	return _CatchallResolver.Contract.InterfaceImplementer(&_CatchallResolver.CallOpts, node, interfaceID)
-}
-
-// InterfaceImplementer is a free data retrieval call binding the contract method 0x124a319c.
-//
-// Solidity: function interfaceImplementer(bytes32 node, bytes4 interfaceID) view returns(address)
-func (_CatchallResolver *CatchallResolverCallerSession) InterfaceImplementer(node [32]byte, interfaceID [4]byte) (common.Address, error) {
-	return _CatchallResolver.Contract.InterfaceImplementer(&_CatchallResolver.CallOpts, node, interfaceID)
-}
-
-// Name is a free data retrieval call binding the contract method 0x691f3431.
-//
-// Solidity: function name(bytes32 node) view returns(string)
-func (_CatchallResolver *CatchallResolverCaller) Name(opts *bind.CallOpts, node [32]byte) (string, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "name", node)
-
-	if err != nil {
-		return *new(string), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(string)).(*string)
-
-	return out0, err
-
-}
-
-// Name is a free data retrieval call binding the contract method 0x691f3431.
-//
-// Solidity: function name(bytes32 node) view returns(string)
-func (_CatchallResolver *CatchallResolverSession) Name(node [32]byte) (string, error) {
-	return _CatchallResolver.Contract.Name(&_CatchallResolver.CallOpts, node)
-}
-
-// Name is a free data retrieval call binding the contract method 0x691f3431.
-//
-// Solidity: function name(bytes32 node) view returns(string)
-func (_CatchallResolver *CatchallResolverCallerSession) Name(node [32]byte) (string, error) {
-	return _CatchallResolver.Contract.Name(&_CatchallResolver.CallOpts, node)
-}
-
-// Parent is a free data retrieval call binding the contract method 0x60f96a8f.
-//
-// Solidity: function parent() view returns(address)
-func (_CatchallResolver *CatchallResolverCaller) Parent(opts *bind.CallOpts) (common.Address, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "parent")
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
-}
-
-// Parent is a free data retrieval call binding the contract method 0x60f96a8f.
-//
-// Solidity: function parent() view returns(address)
-func (_CatchallResolver *CatchallResolverSession) Parent() (common.Address, error) {
-	return _CatchallResolver.Contract.Parent(&_CatchallResolver.CallOpts)
-}
-
-// Parent is a free data retrieval call binding the contract method 0x60f96a8f.
-//
-// Solidity: function parent() view returns(address)
-func (_CatchallResolver *CatchallResolverCallerSession) Parent() (common.Address, error) {
-	return _CatchallResolver.Contract.Parent(&_CatchallResolver.CallOpts)
-}
-
-// ParentNode is a free data retrieval call binding the contract method 0xf3068a00.
-//
-// Solidity: function parentNode() view returns(bytes32)
-func (_CatchallResolver *CatchallResolverCaller) ParentNode(opts *bind.CallOpts) ([32]byte, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "parentNode")
-
-	if err != nil {
-		return *new([32]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
-
-	return out0, err
-
-}
-
-// ParentNode is a free data retrieval call binding the contract method 0xf3068a00.
-//
-// Solidity: function parentNode() view returns(bytes32)
-func (_CatchallResolver *CatchallResolverSession) ParentNode() ([32]byte, error) {
-	return _CatchallResolver.Contract.ParentNode(&_CatchallResolver.CallOpts)
-}
-
-// ParentNode is a free data retrieval call binding the contract method 0xf3068a00.
-//
-// Solidity: function parentNode() view returns(bytes32)
-func (_CatchallResolver *CatchallResolverCallerSession) ParentNode() ([32]byte, error) {
-	return _CatchallResolver.Contract.ParentNode(&_CatchallResolver.CallOpts)
-}
-
-// Pubkey is a free data retrieval call binding the contract method 0xc8690233.
-//
-// Solidity: function pubkey(bytes32 node) view returns(bytes32 x, bytes32 y)
-func (_CatchallResolver *CatchallResolverCaller) Pubkey(opts *bind.CallOpts, node [32]byte) (struct {
-	X [32]byte
-	Y [32]byte
-}, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "pubkey", node)
-
-	outstruct := new(struct {
-		X [32]byte
-		Y [32]byte
-	})
-	if err != nil {
-		return *outstruct, err
-	}
-
-	outstruct.X = *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
-	outstruct.Y = *abi.ConvertType(out[1], new([32]byte)).(*[32]byte)
-
-	return *outstruct, err
-
-}
-
-// Pubkey is a free data retrieval call binding the contract method 0xc8690233.
-//
-// Solidity: function pubkey(bytes32 node) view returns(bytes32 x, bytes32 y)
-func (_CatchallResolver *CatchallResolverSession) Pubkey(node [32]byte) (struct {
-	X [32]byte
-	Y [32]byte
-}, error) {
-	return _CatchallResolver.Contract.Pubkey(&_CatchallResolver.CallOpts, node)
-}
-
-// Pubkey is a free data retrieval call binding the contract method 0xc8690233.
-//
-// Solidity: function pubkey(bytes32 node) view returns(bytes32 x, bytes32 y)
-func (_CatchallResolver *CatchallResolverCallerSession) Pubkey(node [32]byte) (struct {
-	X [32]byte
-	Y [32]byte
-}, error) {
-	return _CatchallResolver.Contract.Pubkey(&_CatchallResolver.CallOpts, node)
-}
-
-// Resolve is a free data retrieval call binding the contract method 0x9061b923.
-//
-// Solidity: function resolve(bytes , bytes data) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCaller) Resolve(opts *bind.CallOpts, arg0 []byte, data []byte) ([]byte, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "resolve", arg0, data)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
-}
-
-// Resolve is a free data retrieval call binding the contract method 0x9061b923.
-//
-// Solidity: function resolve(bytes , bytes data) view returns(bytes)
-func (_CatchallResolver *CatchallResolverSession) Resolve(arg0 []byte, data []byte) ([]byte, error) {
-	return _CatchallResolver.Contract.Resolve(&_CatchallResolver.CallOpts, arg0, data)
-}
-
-// Resolve is a free data retrieval call binding the contract method 0x9061b923.
-//
-// Solidity: function resolve(bytes , bytes data) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCallerSession) Resolve(arg0 []byte, data []byte) ([]byte, error) {
-	return _CatchallResolver.Contract.Resolve(&_CatchallResolver.CallOpts, arg0, data)
+// Solidity: function resolver(bytes name) view returns(address, bytes)
+func (_CatchallResolver *CatchallResolverCallerSession) Resolver(name []byte) (common.Address, []byte, error) {
+	return _CatchallResolver.Contract.Resolver(&_CatchallResolver.CallOpts, name)
 }
 
 // SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
@@ -639,1652 +369,25 @@ func (_CatchallResolver *CatchallResolverCallerSession) Text(node [32]byte, key 
 	return _CatchallResolver.Contract.Text(&_CatchallResolver.CallOpts, node, key)
 }
 
-// Zonehash is a free data retrieval call binding the contract method 0x5c98042b.
+// SetResolver is a paid mutator transaction binding the contract method 0x1896f70a.
 //
-// Solidity: function zonehash(bytes32 node) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCaller) Zonehash(opts *bind.CallOpts, node [32]byte) ([]byte, error) {
-	var out []interface{}
-	err := _CatchallResolver.contract.Call(opts, &out, "zonehash", node)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
+// Solidity: function setResolver(bytes32 _node, address _resolver) returns()
+func (_CatchallResolver *CatchallResolverTransactor) SetResolver(opts *bind.TransactOpts, _node [32]byte, _resolver common.Address) (*types.Transaction, error) {
+	return _CatchallResolver.contract.Transact(opts, "setResolver", _node, _resolver)
 }
 
-// Zonehash is a free data retrieval call binding the contract method 0x5c98042b.
+// SetResolver is a paid mutator transaction binding the contract method 0x1896f70a.
 //
-// Solidity: function zonehash(bytes32 node) view returns(bytes)
-func (_CatchallResolver *CatchallResolverSession) Zonehash(node [32]byte) ([]byte, error) {
-	return _CatchallResolver.Contract.Zonehash(&_CatchallResolver.CallOpts, node)
+// Solidity: function setResolver(bytes32 _node, address _resolver) returns()
+func (_CatchallResolver *CatchallResolverSession) SetResolver(_node [32]byte, _resolver common.Address) (*types.Transaction, error) {
+	return _CatchallResolver.Contract.SetResolver(&_CatchallResolver.TransactOpts, _node, _resolver)
 }
 
-// Zonehash is a free data retrieval call binding the contract method 0x5c98042b.
+// SetResolver is a paid mutator transaction binding the contract method 0x1896f70a.
 //
-// Solidity: function zonehash(bytes32 node) view returns(bytes)
-func (_CatchallResolver *CatchallResolverCallerSession) Zonehash(node [32]byte) ([]byte, error) {
-	return _CatchallResolver.Contract.Zonehash(&_CatchallResolver.CallOpts, node)
-}
-
-// CatchallResolverABIChangedIterator is returned from FilterABIChanged and is used to iterate over the raw logs and unpacked data for ABIChanged events raised by the CatchallResolver contract.
-type CatchallResolverABIChangedIterator struct {
-	Event *CatchallResolverABIChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverABIChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverABIChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverABIChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverABIChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverABIChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverABIChanged represents a ABIChanged event raised by the CatchallResolver contract.
-type CatchallResolverABIChanged struct {
-	Node        [32]byte
-	ContentType *big.Int
-	Raw         types.Log // Blockchain specific contextual infos
-}
-
-// FilterABIChanged is a free log retrieval operation binding the contract event 0xaa121bbeef5f32f5961a2a28966e769023910fc9479059ee3495d4c1a696efe3.
-//
-// Solidity: event ABIChanged(bytes32 indexed node, uint256 indexed contentType)
-func (_CatchallResolver *CatchallResolverFilterer) FilterABIChanged(opts *bind.FilterOpts, node [][32]byte, contentType []*big.Int) (*CatchallResolverABIChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-	var contentTypeRule []interface{}
-	for _, contentTypeItem := range contentType {
-		contentTypeRule = append(contentTypeRule, contentTypeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "ABIChanged", nodeRule, contentTypeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverABIChangedIterator{contract: _CatchallResolver.contract, event: "ABIChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchABIChanged is a free log subscription operation binding the contract event 0xaa121bbeef5f32f5961a2a28966e769023910fc9479059ee3495d4c1a696efe3.
-//
-// Solidity: event ABIChanged(bytes32 indexed node, uint256 indexed contentType)
-func (_CatchallResolver *CatchallResolverFilterer) WatchABIChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverABIChanged, node [][32]byte, contentType []*big.Int) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-	var contentTypeRule []interface{}
-	for _, contentTypeItem := range contentType {
-		contentTypeRule = append(contentTypeRule, contentTypeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "ABIChanged", nodeRule, contentTypeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverABIChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "ABIChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseABIChanged is a log parse operation binding the contract event 0xaa121bbeef5f32f5961a2a28966e769023910fc9479059ee3495d4c1a696efe3.
-//
-// Solidity: event ABIChanged(bytes32 indexed node, uint256 indexed contentType)
-func (_CatchallResolver *CatchallResolverFilterer) ParseABIChanged(log types.Log) (*CatchallResolverABIChanged, error) {
-	event := new(CatchallResolverABIChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "ABIChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverAddrChangedIterator is returned from FilterAddrChanged and is used to iterate over the raw logs and unpacked data for AddrChanged events raised by the CatchallResolver contract.
-type CatchallResolverAddrChangedIterator struct {
-	Event *CatchallResolverAddrChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverAddrChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverAddrChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverAddrChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverAddrChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverAddrChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverAddrChanged represents a AddrChanged event raised by the CatchallResolver contract.
-type CatchallResolverAddrChanged struct {
-	Node [32]byte
-	A    common.Address
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterAddrChanged is a free log retrieval operation binding the contract event 0x52d7d861f09ab3d26239d492e8968629f95e9e318cf0b73bfddc441522a15fd2.
-//
-// Solidity: event AddrChanged(bytes32 indexed node, address a)
-func (_CatchallResolver *CatchallResolverFilterer) FilterAddrChanged(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverAddrChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "AddrChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverAddrChangedIterator{contract: _CatchallResolver.contract, event: "AddrChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchAddrChanged is a free log subscription operation binding the contract event 0x52d7d861f09ab3d26239d492e8968629f95e9e318cf0b73bfddc441522a15fd2.
-//
-// Solidity: event AddrChanged(bytes32 indexed node, address a)
-func (_CatchallResolver *CatchallResolverFilterer) WatchAddrChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverAddrChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "AddrChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverAddrChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "AddrChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseAddrChanged is a log parse operation binding the contract event 0x52d7d861f09ab3d26239d492e8968629f95e9e318cf0b73bfddc441522a15fd2.
-//
-// Solidity: event AddrChanged(bytes32 indexed node, address a)
-func (_CatchallResolver *CatchallResolverFilterer) ParseAddrChanged(log types.Log) (*CatchallResolverAddrChanged, error) {
-	event := new(CatchallResolverAddrChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "AddrChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverAddressChangedIterator is returned from FilterAddressChanged and is used to iterate over the raw logs and unpacked data for AddressChanged events raised by the CatchallResolver contract.
-type CatchallResolverAddressChangedIterator struct {
-	Event *CatchallResolverAddressChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverAddressChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverAddressChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverAddressChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverAddressChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverAddressChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverAddressChanged represents a AddressChanged event raised by the CatchallResolver contract.
-type CatchallResolverAddressChanged struct {
-	Node       [32]byte
-	CoinType   *big.Int
-	NewAddress []byte
-	Raw        types.Log // Blockchain specific contextual infos
-}
-
-// FilterAddressChanged is a free log retrieval operation binding the contract event 0x65412581168e88a1e60c6459d7f44ae83ad0832e670826c05a4e2476b57af752.
-//
-// Solidity: event AddressChanged(bytes32 indexed node, uint256 coinType, bytes newAddress)
-func (_CatchallResolver *CatchallResolverFilterer) FilterAddressChanged(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverAddressChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "AddressChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverAddressChangedIterator{contract: _CatchallResolver.contract, event: "AddressChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchAddressChanged is a free log subscription operation binding the contract event 0x65412581168e88a1e60c6459d7f44ae83ad0832e670826c05a4e2476b57af752.
-//
-// Solidity: event AddressChanged(bytes32 indexed node, uint256 coinType, bytes newAddress)
-func (_CatchallResolver *CatchallResolverFilterer) WatchAddressChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverAddressChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "AddressChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverAddressChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "AddressChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseAddressChanged is a log parse operation binding the contract event 0x65412581168e88a1e60c6459d7f44ae83ad0832e670826c05a4e2476b57af752.
-//
-// Solidity: event AddressChanged(bytes32 indexed node, uint256 coinType, bytes newAddress)
-func (_CatchallResolver *CatchallResolverFilterer) ParseAddressChanged(log types.Log) (*CatchallResolverAddressChanged, error) {
-	event := new(CatchallResolverAddressChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "AddressChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverContenthashChangedIterator is returned from FilterContenthashChanged and is used to iterate over the raw logs and unpacked data for ContenthashChanged events raised by the CatchallResolver contract.
-type CatchallResolverContenthashChangedIterator struct {
-	Event *CatchallResolverContenthashChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverContenthashChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverContenthashChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverContenthashChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverContenthashChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverContenthashChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverContenthashChanged represents a ContenthashChanged event raised by the CatchallResolver contract.
-type CatchallResolverContenthashChanged struct {
-	Node [32]byte
-	Hash []byte
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterContenthashChanged is a free log retrieval operation binding the contract event 0xe379c1624ed7e714cc0937528a32359d69d5281337765313dba4e081b72d7578.
-//
-// Solidity: event ContenthashChanged(bytes32 indexed node, bytes hash)
-func (_CatchallResolver *CatchallResolverFilterer) FilterContenthashChanged(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverContenthashChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "ContenthashChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverContenthashChangedIterator{contract: _CatchallResolver.contract, event: "ContenthashChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchContenthashChanged is a free log subscription operation binding the contract event 0xe379c1624ed7e714cc0937528a32359d69d5281337765313dba4e081b72d7578.
-//
-// Solidity: event ContenthashChanged(bytes32 indexed node, bytes hash)
-func (_CatchallResolver *CatchallResolverFilterer) WatchContenthashChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverContenthashChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "ContenthashChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverContenthashChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "ContenthashChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseContenthashChanged is a log parse operation binding the contract event 0xe379c1624ed7e714cc0937528a32359d69d5281337765313dba4e081b72d7578.
-//
-// Solidity: event ContenthashChanged(bytes32 indexed node, bytes hash)
-func (_CatchallResolver *CatchallResolverFilterer) ParseContenthashChanged(log types.Log) (*CatchallResolverContenthashChanged, error) {
-	event := new(CatchallResolverContenthashChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "ContenthashChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverDNSRecordChangedIterator is returned from FilterDNSRecordChanged and is used to iterate over the raw logs and unpacked data for DNSRecordChanged events raised by the CatchallResolver contract.
-type CatchallResolverDNSRecordChangedIterator struct {
-	Event *CatchallResolverDNSRecordChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverDNSRecordChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverDNSRecordChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverDNSRecordChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverDNSRecordChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverDNSRecordChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverDNSRecordChanged represents a DNSRecordChanged event raised by the CatchallResolver contract.
-type CatchallResolverDNSRecordChanged struct {
-	Node     [32]byte
-	Name     []byte
-	Resource uint16
-	Record   []byte
-	Raw      types.Log // Blockchain specific contextual infos
-}
-
-// FilterDNSRecordChanged is a free log retrieval operation binding the contract event 0x52a608b3303a48862d07a73d82fa221318c0027fbbcfb1b2329bface3f19ff2b.
-//
-// Solidity: event DNSRecordChanged(bytes32 indexed node, bytes name, uint16 resource, bytes record)
-func (_CatchallResolver *CatchallResolverFilterer) FilterDNSRecordChanged(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverDNSRecordChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "DNSRecordChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverDNSRecordChangedIterator{contract: _CatchallResolver.contract, event: "DNSRecordChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchDNSRecordChanged is a free log subscription operation binding the contract event 0x52a608b3303a48862d07a73d82fa221318c0027fbbcfb1b2329bface3f19ff2b.
-//
-// Solidity: event DNSRecordChanged(bytes32 indexed node, bytes name, uint16 resource, bytes record)
-func (_CatchallResolver *CatchallResolverFilterer) WatchDNSRecordChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverDNSRecordChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "DNSRecordChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverDNSRecordChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "DNSRecordChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseDNSRecordChanged is a log parse operation binding the contract event 0x52a608b3303a48862d07a73d82fa221318c0027fbbcfb1b2329bface3f19ff2b.
-//
-// Solidity: event DNSRecordChanged(bytes32 indexed node, bytes name, uint16 resource, bytes record)
-func (_CatchallResolver *CatchallResolverFilterer) ParseDNSRecordChanged(log types.Log) (*CatchallResolverDNSRecordChanged, error) {
-	event := new(CatchallResolverDNSRecordChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "DNSRecordChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverDNSRecordDeletedIterator is returned from FilterDNSRecordDeleted and is used to iterate over the raw logs and unpacked data for DNSRecordDeleted events raised by the CatchallResolver contract.
-type CatchallResolverDNSRecordDeletedIterator struct {
-	Event *CatchallResolverDNSRecordDeleted // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverDNSRecordDeletedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverDNSRecordDeleted)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverDNSRecordDeleted)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverDNSRecordDeletedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverDNSRecordDeletedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverDNSRecordDeleted represents a DNSRecordDeleted event raised by the CatchallResolver contract.
-type CatchallResolverDNSRecordDeleted struct {
-	Node     [32]byte
-	Name     []byte
-	Resource uint16
-	Raw      types.Log // Blockchain specific contextual infos
-}
-
-// FilterDNSRecordDeleted is a free log retrieval operation binding the contract event 0x03528ed0c2a3ebc993b12ce3c16bb382f9c7d88ef7d8a1bf290eaf35955a1207.
-//
-// Solidity: event DNSRecordDeleted(bytes32 indexed node, bytes name, uint16 resource)
-func (_CatchallResolver *CatchallResolverFilterer) FilterDNSRecordDeleted(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverDNSRecordDeletedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "DNSRecordDeleted", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverDNSRecordDeletedIterator{contract: _CatchallResolver.contract, event: "DNSRecordDeleted", logs: logs, sub: sub}, nil
-}
-
-// WatchDNSRecordDeleted is a free log subscription operation binding the contract event 0x03528ed0c2a3ebc993b12ce3c16bb382f9c7d88ef7d8a1bf290eaf35955a1207.
-//
-// Solidity: event DNSRecordDeleted(bytes32 indexed node, bytes name, uint16 resource)
-func (_CatchallResolver *CatchallResolverFilterer) WatchDNSRecordDeleted(opts *bind.WatchOpts, sink chan<- *CatchallResolverDNSRecordDeleted, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "DNSRecordDeleted", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverDNSRecordDeleted)
-				if err := _CatchallResolver.contract.UnpackLog(event, "DNSRecordDeleted", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseDNSRecordDeleted is a log parse operation binding the contract event 0x03528ed0c2a3ebc993b12ce3c16bb382f9c7d88ef7d8a1bf290eaf35955a1207.
-//
-// Solidity: event DNSRecordDeleted(bytes32 indexed node, bytes name, uint16 resource)
-func (_CatchallResolver *CatchallResolverFilterer) ParseDNSRecordDeleted(log types.Log) (*CatchallResolverDNSRecordDeleted, error) {
-	event := new(CatchallResolverDNSRecordDeleted)
-	if err := _CatchallResolver.contract.UnpackLog(event, "DNSRecordDeleted", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverDNSZoneClearedIterator is returned from FilterDNSZoneCleared and is used to iterate over the raw logs and unpacked data for DNSZoneCleared events raised by the CatchallResolver contract.
-type CatchallResolverDNSZoneClearedIterator struct {
-	Event *CatchallResolverDNSZoneCleared // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverDNSZoneClearedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverDNSZoneCleared)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverDNSZoneCleared)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverDNSZoneClearedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverDNSZoneClearedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverDNSZoneCleared represents a DNSZoneCleared event raised by the CatchallResolver contract.
-type CatchallResolverDNSZoneCleared struct {
-	Node [32]byte
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterDNSZoneCleared is a free log retrieval operation binding the contract event 0xb757169b8492ca2f1c6619d9d76ce22803035c3b1d5f6930dffe7b127c1a1983.
-//
-// Solidity: event DNSZoneCleared(bytes32 indexed node)
-func (_CatchallResolver *CatchallResolverFilterer) FilterDNSZoneCleared(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverDNSZoneClearedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "DNSZoneCleared", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverDNSZoneClearedIterator{contract: _CatchallResolver.contract, event: "DNSZoneCleared", logs: logs, sub: sub}, nil
-}
-
-// WatchDNSZoneCleared is a free log subscription operation binding the contract event 0xb757169b8492ca2f1c6619d9d76ce22803035c3b1d5f6930dffe7b127c1a1983.
-//
-// Solidity: event DNSZoneCleared(bytes32 indexed node)
-func (_CatchallResolver *CatchallResolverFilterer) WatchDNSZoneCleared(opts *bind.WatchOpts, sink chan<- *CatchallResolverDNSZoneCleared, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "DNSZoneCleared", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverDNSZoneCleared)
-				if err := _CatchallResolver.contract.UnpackLog(event, "DNSZoneCleared", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseDNSZoneCleared is a log parse operation binding the contract event 0xb757169b8492ca2f1c6619d9d76ce22803035c3b1d5f6930dffe7b127c1a1983.
-//
-// Solidity: event DNSZoneCleared(bytes32 indexed node)
-func (_CatchallResolver *CatchallResolverFilterer) ParseDNSZoneCleared(log types.Log) (*CatchallResolverDNSZoneCleared, error) {
-	event := new(CatchallResolverDNSZoneCleared)
-	if err := _CatchallResolver.contract.UnpackLog(event, "DNSZoneCleared", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverDNSZonehashChangedIterator is returned from FilterDNSZonehashChanged and is used to iterate over the raw logs and unpacked data for DNSZonehashChanged events raised by the CatchallResolver contract.
-type CatchallResolverDNSZonehashChangedIterator struct {
-	Event *CatchallResolverDNSZonehashChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverDNSZonehashChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverDNSZonehashChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverDNSZonehashChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverDNSZonehashChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverDNSZonehashChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverDNSZonehashChanged represents a DNSZonehashChanged event raised by the CatchallResolver contract.
-type CatchallResolverDNSZonehashChanged struct {
-	Node         [32]byte
-	Lastzonehash []byte
-	Zonehash     []byte
-	Raw          types.Log // Blockchain specific contextual infos
-}
-
-// FilterDNSZonehashChanged is a free log retrieval operation binding the contract event 0x8f15ed4b723ef428f250961da8315675b507046737e19319fc1a4d81bfe87f85.
-//
-// Solidity: event DNSZonehashChanged(bytes32 indexed node, bytes lastzonehash, bytes zonehash)
-func (_CatchallResolver *CatchallResolverFilterer) FilterDNSZonehashChanged(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverDNSZonehashChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "DNSZonehashChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverDNSZonehashChangedIterator{contract: _CatchallResolver.contract, event: "DNSZonehashChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchDNSZonehashChanged is a free log subscription operation binding the contract event 0x8f15ed4b723ef428f250961da8315675b507046737e19319fc1a4d81bfe87f85.
-//
-// Solidity: event DNSZonehashChanged(bytes32 indexed node, bytes lastzonehash, bytes zonehash)
-func (_CatchallResolver *CatchallResolverFilterer) WatchDNSZonehashChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverDNSZonehashChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "DNSZonehashChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverDNSZonehashChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "DNSZonehashChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseDNSZonehashChanged is a log parse operation binding the contract event 0x8f15ed4b723ef428f250961da8315675b507046737e19319fc1a4d81bfe87f85.
-//
-// Solidity: event DNSZonehashChanged(bytes32 indexed node, bytes lastzonehash, bytes zonehash)
-func (_CatchallResolver *CatchallResolverFilterer) ParseDNSZonehashChanged(log types.Log) (*CatchallResolverDNSZonehashChanged, error) {
-	event := new(CatchallResolverDNSZonehashChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "DNSZonehashChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverInterfaceChangedIterator is returned from FilterInterfaceChanged and is used to iterate over the raw logs and unpacked data for InterfaceChanged events raised by the CatchallResolver contract.
-type CatchallResolverInterfaceChangedIterator struct {
-	Event *CatchallResolverInterfaceChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverInterfaceChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverInterfaceChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverInterfaceChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverInterfaceChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverInterfaceChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverInterfaceChanged represents a InterfaceChanged event raised by the CatchallResolver contract.
-type CatchallResolverInterfaceChanged struct {
-	Node        [32]byte
-	InterfaceID [4]byte
-	Implementer common.Address
-	Raw         types.Log // Blockchain specific contextual infos
-}
-
-// FilterInterfaceChanged is a free log retrieval operation binding the contract event 0x7c69f06bea0bdef565b709e93a147836b0063ba2dd89f02d0b7e8d931e6a6daa.
-//
-// Solidity: event InterfaceChanged(bytes32 indexed node, bytes4 indexed interfaceID, address implementer)
-func (_CatchallResolver *CatchallResolverFilterer) FilterInterfaceChanged(opts *bind.FilterOpts, node [][32]byte, interfaceID [][4]byte) (*CatchallResolverInterfaceChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-	var interfaceIDRule []interface{}
-	for _, interfaceIDItem := range interfaceID {
-		interfaceIDRule = append(interfaceIDRule, interfaceIDItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "InterfaceChanged", nodeRule, interfaceIDRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverInterfaceChangedIterator{contract: _CatchallResolver.contract, event: "InterfaceChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchInterfaceChanged is a free log subscription operation binding the contract event 0x7c69f06bea0bdef565b709e93a147836b0063ba2dd89f02d0b7e8d931e6a6daa.
-//
-// Solidity: event InterfaceChanged(bytes32 indexed node, bytes4 indexed interfaceID, address implementer)
-func (_CatchallResolver *CatchallResolverFilterer) WatchInterfaceChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverInterfaceChanged, node [][32]byte, interfaceID [][4]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-	var interfaceIDRule []interface{}
-	for _, interfaceIDItem := range interfaceID {
-		interfaceIDRule = append(interfaceIDRule, interfaceIDItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "InterfaceChanged", nodeRule, interfaceIDRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverInterfaceChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "InterfaceChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseInterfaceChanged is a log parse operation binding the contract event 0x7c69f06bea0bdef565b709e93a147836b0063ba2dd89f02d0b7e8d931e6a6daa.
-//
-// Solidity: event InterfaceChanged(bytes32 indexed node, bytes4 indexed interfaceID, address implementer)
-func (_CatchallResolver *CatchallResolverFilterer) ParseInterfaceChanged(log types.Log) (*CatchallResolverInterfaceChanged, error) {
-	event := new(CatchallResolverInterfaceChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "InterfaceChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverNameChangedIterator is returned from FilterNameChanged and is used to iterate over the raw logs and unpacked data for NameChanged events raised by the CatchallResolver contract.
-type CatchallResolverNameChangedIterator struct {
-	Event *CatchallResolverNameChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverNameChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverNameChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverNameChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverNameChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverNameChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverNameChanged represents a NameChanged event raised by the CatchallResolver contract.
-type CatchallResolverNameChanged struct {
-	Node [32]byte
-	Name string
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterNameChanged is a free log retrieval operation binding the contract event 0xb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7.
-//
-// Solidity: event NameChanged(bytes32 indexed node, string name)
-func (_CatchallResolver *CatchallResolverFilterer) FilterNameChanged(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverNameChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "NameChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverNameChangedIterator{contract: _CatchallResolver.contract, event: "NameChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchNameChanged is a free log subscription operation binding the contract event 0xb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7.
-//
-// Solidity: event NameChanged(bytes32 indexed node, string name)
-func (_CatchallResolver *CatchallResolverFilterer) WatchNameChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverNameChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "NameChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverNameChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "NameChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseNameChanged is a log parse operation binding the contract event 0xb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7.
-//
-// Solidity: event NameChanged(bytes32 indexed node, string name)
-func (_CatchallResolver *CatchallResolverFilterer) ParseNameChanged(log types.Log) (*CatchallResolverNameChanged, error) {
-	event := new(CatchallResolverNameChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "NameChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// CatchallResolverPubkeyChangedIterator is returned from FilterPubkeyChanged and is used to iterate over the raw logs and unpacked data for PubkeyChanged events raised by the CatchallResolver contract.
-type CatchallResolverPubkeyChangedIterator struct {
-	Event *CatchallResolverPubkeyChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *CatchallResolverPubkeyChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(CatchallResolverPubkeyChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(CatchallResolverPubkeyChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *CatchallResolverPubkeyChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *CatchallResolverPubkeyChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// CatchallResolverPubkeyChanged represents a PubkeyChanged event raised by the CatchallResolver contract.
-type CatchallResolverPubkeyChanged struct {
-	Node [32]byte
-	X    [32]byte
-	Y    [32]byte
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterPubkeyChanged is a free log retrieval operation binding the contract event 0x1d6f5e03d3f63eb58751986629a5439baee5079ff04f345becb66e23eb154e46.
-//
-// Solidity: event PubkeyChanged(bytes32 indexed node, bytes32 x, bytes32 y)
-func (_CatchallResolver *CatchallResolverFilterer) FilterPubkeyChanged(opts *bind.FilterOpts, node [][32]byte) (*CatchallResolverPubkeyChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.FilterLogs(opts, "PubkeyChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &CatchallResolverPubkeyChangedIterator{contract: _CatchallResolver.contract, event: "PubkeyChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchPubkeyChanged is a free log subscription operation binding the contract event 0x1d6f5e03d3f63eb58751986629a5439baee5079ff04f345becb66e23eb154e46.
-//
-// Solidity: event PubkeyChanged(bytes32 indexed node, bytes32 x, bytes32 y)
-func (_CatchallResolver *CatchallResolverFilterer) WatchPubkeyChanged(opts *bind.WatchOpts, sink chan<- *CatchallResolverPubkeyChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _CatchallResolver.contract.WatchLogs(opts, "PubkeyChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(CatchallResolverPubkeyChanged)
-				if err := _CatchallResolver.contract.UnpackLog(event, "PubkeyChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParsePubkeyChanged is a log parse operation binding the contract event 0x1d6f5e03d3f63eb58751986629a5439baee5079ff04f345becb66e23eb154e46.
-//
-// Solidity: event PubkeyChanged(bytes32 indexed node, bytes32 x, bytes32 y)
-func (_CatchallResolver *CatchallResolverFilterer) ParsePubkeyChanged(log types.Log) (*CatchallResolverPubkeyChanged, error) {
-	event := new(CatchallResolverPubkeyChanged)
-	if err := _CatchallResolver.contract.UnpackLog(event, "PubkeyChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
+// Solidity: function setResolver(bytes32 _node, address _resolver) returns()
+func (_CatchallResolver *CatchallResolverTransactorSession) SetResolver(_node [32]byte, _resolver common.Address) (*types.Transaction, error) {
+	return _CatchallResolver.Contract.SetResolver(&_CatchallResolver.TransactOpts, _node, _resolver)
 }
 
 // CatchallResolverTextChangedIterator is returned from FilterTextChanged and is used to iterate over the raw logs and unpacked data for TextChanged events raised by the CatchallResolver contract.
@@ -2435,6 +538,1220 @@ func (_CatchallResolver *CatchallResolverFilterer) WatchTextChanged(opts *bind.W
 func (_CatchallResolver *CatchallResolverFilterer) ParseTextChanged(log types.Log) (*CatchallResolverTextChanged, error) {
 	event := new(CatchallResolverTextChanged)
 	if err := _CatchallResolver.contract.UnpackLog(event, "TextChanged", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// ENSMetaData contains all meta data concerning the ENS contract.
+var ENSMetaData = &bind.MetaData{
+	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"label\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"NewOwner\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"}],\"name\":\"NewResolver\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"ttl\",\"type\":\"uint64\"}],\"name\":\"NewTTL\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"recordExists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"resolver\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"setOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"ttl\",\"type\":\"uint64\"}],\"name\":\"setRecord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"}],\"name\":\"setResolver\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"label\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"setSubnodeOwner\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"label\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"ttl\",\"type\":\"uint64\"}],\"name\":\"setSubnodeRecord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"ttl\",\"type\":\"uint64\"}],\"name\":\"setTTL\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"ttl\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+	Sigs: map[string]string{
+		"e985e9c5": "isApprovedForAll(address,address)",
+		"02571be3": "owner(bytes32)",
+		"f79fe538": "recordExists(bytes32)",
+		"0178b8bf": "resolver(bytes32)",
+		"a22cb465": "setApprovalForAll(address,bool)",
+		"5b0fc9c3": "setOwner(bytes32,address)",
+		"cf408823": "setRecord(bytes32,address,address,uint64)",
+		"1896f70a": "setResolver(bytes32,address)",
+		"06ab5923": "setSubnodeOwner(bytes32,bytes32,address)",
+		"5ef2c7f0": "setSubnodeRecord(bytes32,bytes32,address,address,uint64)",
+		"14ab9038": "setTTL(bytes32,uint64)",
+		"16a25cbd": "ttl(bytes32)",
+	},
+}
+
+// ENSABI is the input ABI used to generate the binding from.
+// Deprecated: Use ENSMetaData.ABI instead.
+var ENSABI = ENSMetaData.ABI
+
+// Deprecated: Use ENSMetaData.Sigs instead.
+// ENSFuncSigs maps the 4-byte function signature to its string representation.
+var ENSFuncSigs = ENSMetaData.Sigs
+
+// ENS is an auto generated Go binding around an Ethereum contract.
+type ENS struct {
+	ENSCaller     // Read-only binding to the contract
+	ENSTransactor // Write-only binding to the contract
+	ENSFilterer   // Log filterer for contract events
+}
+
+// ENSCaller is an auto generated read-only Go binding around an Ethereum contract.
+type ENSCaller struct {
+	contract *bind.BoundContract // Generic contract wrapper for the low level calls
+}
+
+// ENSTransactor is an auto generated write-only Go binding around an Ethereum contract.
+type ENSTransactor struct {
+	contract *bind.BoundContract // Generic contract wrapper for the low level calls
+}
+
+// ENSFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
+type ENSFilterer struct {
+	contract *bind.BoundContract // Generic contract wrapper for the low level calls
+}
+
+// ENSSession is an auto generated Go binding around an Ethereum contract,
+// with pre-set call and transact options.
+type ENSSession struct {
+	Contract     *ENS              // Generic contract binding to set the session for
+	CallOpts     bind.CallOpts     // Call options to use throughout this session
+	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
+}
+
+// ENSCallerSession is an auto generated read-only Go binding around an Ethereum contract,
+// with pre-set call options.
+type ENSCallerSession struct {
+	Contract *ENSCaller    // Generic contract caller binding to set the session for
+	CallOpts bind.CallOpts // Call options to use throughout this session
+}
+
+// ENSTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
+// with pre-set transact options.
+type ENSTransactorSession struct {
+	Contract     *ENSTransactor    // Generic contract transactor binding to set the session for
+	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
+}
+
+// ENSRaw is an auto generated low-level Go binding around an Ethereum contract.
+type ENSRaw struct {
+	Contract *ENS // Generic contract binding to access the raw methods on
+}
+
+// ENSCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
+type ENSCallerRaw struct {
+	Contract *ENSCaller // Generic read-only contract binding to access the raw methods on
+}
+
+// ENSTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
+type ENSTransactorRaw struct {
+	Contract *ENSTransactor // Generic write-only contract binding to access the raw methods on
+}
+
+// NewENS creates a new instance of ENS, bound to a specific deployed contract.
+func NewENS(address common.Address, backend bind.ContractBackend) (*ENS, error) {
+	contract, err := bindENS(address, backend, backend, backend)
+	if err != nil {
+		return nil, err
+	}
+	return &ENS{ENSCaller: ENSCaller{contract: contract}, ENSTransactor: ENSTransactor{contract: contract}, ENSFilterer: ENSFilterer{contract: contract}}, nil
+}
+
+// NewENSCaller creates a new read-only instance of ENS, bound to a specific deployed contract.
+func NewENSCaller(address common.Address, caller bind.ContractCaller) (*ENSCaller, error) {
+	contract, err := bindENS(address, caller, nil, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &ENSCaller{contract: contract}, nil
+}
+
+// NewENSTransactor creates a new write-only instance of ENS, bound to a specific deployed contract.
+func NewENSTransactor(address common.Address, transactor bind.ContractTransactor) (*ENSTransactor, error) {
+	contract, err := bindENS(address, nil, transactor, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &ENSTransactor{contract: contract}, nil
+}
+
+// NewENSFilterer creates a new log filterer instance of ENS, bound to a specific deployed contract.
+func NewENSFilterer(address common.Address, filterer bind.ContractFilterer) (*ENSFilterer, error) {
+	contract, err := bindENS(address, nil, nil, filterer)
+	if err != nil {
+		return nil, err
+	}
+	return &ENSFilterer{contract: contract}, nil
+}
+
+// bindENS binds a generic wrapper to an already deployed contract.
+func bindENS(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
+	parsed, err := abi.JSON(strings.NewReader(ENSABI))
+	if err != nil {
+		return nil, err
+	}
+	return bind.NewBoundContract(address, parsed, caller, transactor, filterer), nil
+}
+
+// Call invokes the (constant) contract method with params as input values and
+// sets the output to result. The result type might be a single field for simple
+// returns, a slice of interfaces for anonymous returns and a struct for named
+// returns.
+func (_ENS *ENSRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _ENS.Contract.ENSCaller.contract.Call(opts, result, method, params...)
+}
+
+// Transfer initiates a plain transaction to move funds to the contract, calling
+// its default method if one is available.
+func (_ENS *ENSRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _ENS.Contract.ENSTransactor.contract.Transfer(opts)
+}
+
+// Transact invokes the (paid) contract method with params as input values.
+func (_ENS *ENSRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _ENS.Contract.ENSTransactor.contract.Transact(opts, method, params...)
+}
+
+// Call invokes the (constant) contract method with params as input values and
+// sets the output to result. The result type might be a single field for simple
+// returns, a slice of interfaces for anonymous returns and a struct for named
+// returns.
+func (_ENS *ENSCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _ENS.Contract.contract.Call(opts, result, method, params...)
+}
+
+// Transfer initiates a plain transaction to move funds to the contract, calling
+// its default method if one is available.
+func (_ENS *ENSTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _ENS.Contract.contract.Transfer(opts)
+}
+
+// Transact invokes the (paid) contract method with params as input values.
+func (_ENS *ENSTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _ENS.Contract.contract.Transact(opts, method, params...)
+}
+
+// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+//
+// Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
+func (_ENS *ENSCaller) IsApprovedForAll(opts *bind.CallOpts, owner common.Address, operator common.Address) (bool, error) {
+	var out []interface{}
+	err := _ENS.contract.Call(opts, &out, "isApprovedForAll", owner, operator)
+
+	if err != nil {
+		return *new(bool), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
+
+	return out0, err
+
+}
+
+// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+//
+// Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
+func (_ENS *ENSSession) IsApprovedForAll(owner common.Address, operator common.Address) (bool, error) {
+	return _ENS.Contract.IsApprovedForAll(&_ENS.CallOpts, owner, operator)
+}
+
+// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+//
+// Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
+func (_ENS *ENSCallerSession) IsApprovedForAll(owner common.Address, operator common.Address) (bool, error) {
+	return _ENS.Contract.IsApprovedForAll(&_ENS.CallOpts, owner, operator)
+}
+
+// Owner is a free data retrieval call binding the contract method 0x02571be3.
+//
+// Solidity: function owner(bytes32 node) view returns(address)
+func (_ENS *ENSCaller) Owner(opts *bind.CallOpts, node [32]byte) (common.Address, error) {
+	var out []interface{}
+	err := _ENS.contract.Call(opts, &out, "owner", node)
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Owner is a free data retrieval call binding the contract method 0x02571be3.
+//
+// Solidity: function owner(bytes32 node) view returns(address)
+func (_ENS *ENSSession) Owner(node [32]byte) (common.Address, error) {
+	return _ENS.Contract.Owner(&_ENS.CallOpts, node)
+}
+
+// Owner is a free data retrieval call binding the contract method 0x02571be3.
+//
+// Solidity: function owner(bytes32 node) view returns(address)
+func (_ENS *ENSCallerSession) Owner(node [32]byte) (common.Address, error) {
+	return _ENS.Contract.Owner(&_ENS.CallOpts, node)
+}
+
+// RecordExists is a free data retrieval call binding the contract method 0xf79fe538.
+//
+// Solidity: function recordExists(bytes32 node) view returns(bool)
+func (_ENS *ENSCaller) RecordExists(opts *bind.CallOpts, node [32]byte) (bool, error) {
+	var out []interface{}
+	err := _ENS.contract.Call(opts, &out, "recordExists", node)
+
+	if err != nil {
+		return *new(bool), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
+
+	return out0, err
+
+}
+
+// RecordExists is a free data retrieval call binding the contract method 0xf79fe538.
+//
+// Solidity: function recordExists(bytes32 node) view returns(bool)
+func (_ENS *ENSSession) RecordExists(node [32]byte) (bool, error) {
+	return _ENS.Contract.RecordExists(&_ENS.CallOpts, node)
+}
+
+// RecordExists is a free data retrieval call binding the contract method 0xf79fe538.
+//
+// Solidity: function recordExists(bytes32 node) view returns(bool)
+func (_ENS *ENSCallerSession) RecordExists(node [32]byte) (bool, error) {
+	return _ENS.Contract.RecordExists(&_ENS.CallOpts, node)
+}
+
+// Resolver is a free data retrieval call binding the contract method 0x0178b8bf.
+//
+// Solidity: function resolver(bytes32 node) view returns(address)
+func (_ENS *ENSCaller) Resolver(opts *bind.CallOpts, node [32]byte) (common.Address, error) {
+	var out []interface{}
+	err := _ENS.contract.Call(opts, &out, "resolver", node)
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Resolver is a free data retrieval call binding the contract method 0x0178b8bf.
+//
+// Solidity: function resolver(bytes32 node) view returns(address)
+func (_ENS *ENSSession) Resolver(node [32]byte) (common.Address, error) {
+	return _ENS.Contract.Resolver(&_ENS.CallOpts, node)
+}
+
+// Resolver is a free data retrieval call binding the contract method 0x0178b8bf.
+//
+// Solidity: function resolver(bytes32 node) view returns(address)
+func (_ENS *ENSCallerSession) Resolver(node [32]byte) (common.Address, error) {
+	return _ENS.Contract.Resolver(&_ENS.CallOpts, node)
+}
+
+// Ttl is a free data retrieval call binding the contract method 0x16a25cbd.
+//
+// Solidity: function ttl(bytes32 node) view returns(uint64)
+func (_ENS *ENSCaller) Ttl(opts *bind.CallOpts, node [32]byte) (uint64, error) {
+	var out []interface{}
+	err := _ENS.contract.Call(opts, &out, "ttl", node)
+
+	if err != nil {
+		return *new(uint64), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(uint64)).(*uint64)
+
+	return out0, err
+
+}
+
+// Ttl is a free data retrieval call binding the contract method 0x16a25cbd.
+//
+// Solidity: function ttl(bytes32 node) view returns(uint64)
+func (_ENS *ENSSession) Ttl(node [32]byte) (uint64, error) {
+	return _ENS.Contract.Ttl(&_ENS.CallOpts, node)
+}
+
+// Ttl is a free data retrieval call binding the contract method 0x16a25cbd.
+//
+// Solidity: function ttl(bytes32 node) view returns(uint64)
+func (_ENS *ENSCallerSession) Ttl(node [32]byte) (uint64, error) {
+	return _ENS.Contract.Ttl(&_ENS.CallOpts, node)
+}
+
+// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+//
+// Solidity: function setApprovalForAll(address operator, bool approved) returns()
+func (_ENS *ENSTransactor) SetApprovalForAll(opts *bind.TransactOpts, operator common.Address, approved bool) (*types.Transaction, error) {
+	return _ENS.contract.Transact(opts, "setApprovalForAll", operator, approved)
+}
+
+// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+//
+// Solidity: function setApprovalForAll(address operator, bool approved) returns()
+func (_ENS *ENSSession) SetApprovalForAll(operator common.Address, approved bool) (*types.Transaction, error) {
+	return _ENS.Contract.SetApprovalForAll(&_ENS.TransactOpts, operator, approved)
+}
+
+// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+//
+// Solidity: function setApprovalForAll(address operator, bool approved) returns()
+func (_ENS *ENSTransactorSession) SetApprovalForAll(operator common.Address, approved bool) (*types.Transaction, error) {
+	return _ENS.Contract.SetApprovalForAll(&_ENS.TransactOpts, operator, approved)
+}
+
+// SetOwner is a paid mutator transaction binding the contract method 0x5b0fc9c3.
+//
+// Solidity: function setOwner(bytes32 node, address owner) returns()
+func (_ENS *ENSTransactor) SetOwner(opts *bind.TransactOpts, node [32]byte, owner common.Address) (*types.Transaction, error) {
+	return _ENS.contract.Transact(opts, "setOwner", node, owner)
+}
+
+// SetOwner is a paid mutator transaction binding the contract method 0x5b0fc9c3.
+//
+// Solidity: function setOwner(bytes32 node, address owner) returns()
+func (_ENS *ENSSession) SetOwner(node [32]byte, owner common.Address) (*types.Transaction, error) {
+	return _ENS.Contract.SetOwner(&_ENS.TransactOpts, node, owner)
+}
+
+// SetOwner is a paid mutator transaction binding the contract method 0x5b0fc9c3.
+//
+// Solidity: function setOwner(bytes32 node, address owner) returns()
+func (_ENS *ENSTransactorSession) SetOwner(node [32]byte, owner common.Address) (*types.Transaction, error) {
+	return _ENS.Contract.SetOwner(&_ENS.TransactOpts, node, owner)
+}
+
+// SetRecord is a paid mutator transaction binding the contract method 0xcf408823.
+//
+// Solidity: function setRecord(bytes32 node, address owner, address resolver, uint64 ttl) returns()
+func (_ENS *ENSTransactor) SetRecord(opts *bind.TransactOpts, node [32]byte, owner common.Address, resolver common.Address, ttl uint64) (*types.Transaction, error) {
+	return _ENS.contract.Transact(opts, "setRecord", node, owner, resolver, ttl)
+}
+
+// SetRecord is a paid mutator transaction binding the contract method 0xcf408823.
+//
+// Solidity: function setRecord(bytes32 node, address owner, address resolver, uint64 ttl) returns()
+func (_ENS *ENSSession) SetRecord(node [32]byte, owner common.Address, resolver common.Address, ttl uint64) (*types.Transaction, error) {
+	return _ENS.Contract.SetRecord(&_ENS.TransactOpts, node, owner, resolver, ttl)
+}
+
+// SetRecord is a paid mutator transaction binding the contract method 0xcf408823.
+//
+// Solidity: function setRecord(bytes32 node, address owner, address resolver, uint64 ttl) returns()
+func (_ENS *ENSTransactorSession) SetRecord(node [32]byte, owner common.Address, resolver common.Address, ttl uint64) (*types.Transaction, error) {
+	return _ENS.Contract.SetRecord(&_ENS.TransactOpts, node, owner, resolver, ttl)
+}
+
+// SetResolver is a paid mutator transaction binding the contract method 0x1896f70a.
+//
+// Solidity: function setResolver(bytes32 node, address resolver) returns()
+func (_ENS *ENSTransactor) SetResolver(opts *bind.TransactOpts, node [32]byte, resolver common.Address) (*types.Transaction, error) {
+	return _ENS.contract.Transact(opts, "setResolver", node, resolver)
+}
+
+// SetResolver is a paid mutator transaction binding the contract method 0x1896f70a.
+//
+// Solidity: function setResolver(bytes32 node, address resolver) returns()
+func (_ENS *ENSSession) SetResolver(node [32]byte, resolver common.Address) (*types.Transaction, error) {
+	return _ENS.Contract.SetResolver(&_ENS.TransactOpts, node, resolver)
+}
+
+// SetResolver is a paid mutator transaction binding the contract method 0x1896f70a.
+//
+// Solidity: function setResolver(bytes32 node, address resolver) returns()
+func (_ENS *ENSTransactorSession) SetResolver(node [32]byte, resolver common.Address) (*types.Transaction, error) {
+	return _ENS.Contract.SetResolver(&_ENS.TransactOpts, node, resolver)
+}
+
+// SetSubnodeOwner is a paid mutator transaction binding the contract method 0x06ab5923.
+//
+// Solidity: function setSubnodeOwner(bytes32 node, bytes32 label, address owner) returns(bytes32)
+func (_ENS *ENSTransactor) SetSubnodeOwner(opts *bind.TransactOpts, node [32]byte, label [32]byte, owner common.Address) (*types.Transaction, error) {
+	return _ENS.contract.Transact(opts, "setSubnodeOwner", node, label, owner)
+}
+
+// SetSubnodeOwner is a paid mutator transaction binding the contract method 0x06ab5923.
+//
+// Solidity: function setSubnodeOwner(bytes32 node, bytes32 label, address owner) returns(bytes32)
+func (_ENS *ENSSession) SetSubnodeOwner(node [32]byte, label [32]byte, owner common.Address) (*types.Transaction, error) {
+	return _ENS.Contract.SetSubnodeOwner(&_ENS.TransactOpts, node, label, owner)
+}
+
+// SetSubnodeOwner is a paid mutator transaction binding the contract method 0x06ab5923.
+//
+// Solidity: function setSubnodeOwner(bytes32 node, bytes32 label, address owner) returns(bytes32)
+func (_ENS *ENSTransactorSession) SetSubnodeOwner(node [32]byte, label [32]byte, owner common.Address) (*types.Transaction, error) {
+	return _ENS.Contract.SetSubnodeOwner(&_ENS.TransactOpts, node, label, owner)
+}
+
+// SetSubnodeRecord is a paid mutator transaction binding the contract method 0x5ef2c7f0.
+//
+// Solidity: function setSubnodeRecord(bytes32 node, bytes32 label, address owner, address resolver, uint64 ttl) returns()
+func (_ENS *ENSTransactor) SetSubnodeRecord(opts *bind.TransactOpts, node [32]byte, label [32]byte, owner common.Address, resolver common.Address, ttl uint64) (*types.Transaction, error) {
+	return _ENS.contract.Transact(opts, "setSubnodeRecord", node, label, owner, resolver, ttl)
+}
+
+// SetSubnodeRecord is a paid mutator transaction binding the contract method 0x5ef2c7f0.
+//
+// Solidity: function setSubnodeRecord(bytes32 node, bytes32 label, address owner, address resolver, uint64 ttl) returns()
+func (_ENS *ENSSession) SetSubnodeRecord(node [32]byte, label [32]byte, owner common.Address, resolver common.Address, ttl uint64) (*types.Transaction, error) {
+	return _ENS.Contract.SetSubnodeRecord(&_ENS.TransactOpts, node, label, owner, resolver, ttl)
+}
+
+// SetSubnodeRecord is a paid mutator transaction binding the contract method 0x5ef2c7f0.
+//
+// Solidity: function setSubnodeRecord(bytes32 node, bytes32 label, address owner, address resolver, uint64 ttl) returns()
+func (_ENS *ENSTransactorSession) SetSubnodeRecord(node [32]byte, label [32]byte, owner common.Address, resolver common.Address, ttl uint64) (*types.Transaction, error) {
+	return _ENS.Contract.SetSubnodeRecord(&_ENS.TransactOpts, node, label, owner, resolver, ttl)
+}
+
+// SetTTL is a paid mutator transaction binding the contract method 0x14ab9038.
+//
+// Solidity: function setTTL(bytes32 node, uint64 ttl) returns()
+func (_ENS *ENSTransactor) SetTTL(opts *bind.TransactOpts, node [32]byte, ttl uint64) (*types.Transaction, error) {
+	return _ENS.contract.Transact(opts, "setTTL", node, ttl)
+}
+
+// SetTTL is a paid mutator transaction binding the contract method 0x14ab9038.
+//
+// Solidity: function setTTL(bytes32 node, uint64 ttl) returns()
+func (_ENS *ENSSession) SetTTL(node [32]byte, ttl uint64) (*types.Transaction, error) {
+	return _ENS.Contract.SetTTL(&_ENS.TransactOpts, node, ttl)
+}
+
+// SetTTL is a paid mutator transaction binding the contract method 0x14ab9038.
+//
+// Solidity: function setTTL(bytes32 node, uint64 ttl) returns()
+func (_ENS *ENSTransactorSession) SetTTL(node [32]byte, ttl uint64) (*types.Transaction, error) {
+	return _ENS.Contract.SetTTL(&_ENS.TransactOpts, node, ttl)
+}
+
+// ENSApprovalForAllIterator is returned from FilterApprovalForAll and is used to iterate over the raw logs and unpacked data for ApprovalForAll events raised by the ENS contract.
+type ENSApprovalForAllIterator struct {
+	Event *ENSApprovalForAll // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *ENSApprovalForAllIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(ENSApprovalForAll)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(ENSApprovalForAll)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *ENSApprovalForAllIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *ENSApprovalForAllIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// ENSApprovalForAll represents a ApprovalForAll event raised by the ENS contract.
+type ENSApprovalForAll struct {
+	Owner    common.Address
+	Operator common.Address
+	Approved bool
+	Raw      types.Log // Blockchain specific contextual infos
+}
+
+// FilterApprovalForAll is a free log retrieval operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+//
+// Solidity: event ApprovalForAll(address indexed owner, address indexed operator, bool approved)
+func (_ENS *ENSFilterer) FilterApprovalForAll(opts *bind.FilterOpts, owner []common.Address, operator []common.Address) (*ENSApprovalForAllIterator, error) {
+
+	var ownerRule []interface{}
+	for _, ownerItem := range owner {
+		ownerRule = append(ownerRule, ownerItem)
+	}
+	var operatorRule []interface{}
+	for _, operatorItem := range operator {
+		operatorRule = append(operatorRule, operatorItem)
+	}
+
+	logs, sub, err := _ENS.contract.FilterLogs(opts, "ApprovalForAll", ownerRule, operatorRule)
+	if err != nil {
+		return nil, err
+	}
+	return &ENSApprovalForAllIterator{contract: _ENS.contract, event: "ApprovalForAll", logs: logs, sub: sub}, nil
+}
+
+// WatchApprovalForAll is a free log subscription operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+//
+// Solidity: event ApprovalForAll(address indexed owner, address indexed operator, bool approved)
+func (_ENS *ENSFilterer) WatchApprovalForAll(opts *bind.WatchOpts, sink chan<- *ENSApprovalForAll, owner []common.Address, operator []common.Address) (event.Subscription, error) {
+
+	var ownerRule []interface{}
+	for _, ownerItem := range owner {
+		ownerRule = append(ownerRule, ownerItem)
+	}
+	var operatorRule []interface{}
+	for _, operatorItem := range operator {
+		operatorRule = append(operatorRule, operatorItem)
+	}
+
+	logs, sub, err := _ENS.contract.WatchLogs(opts, "ApprovalForAll", ownerRule, operatorRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(ENSApprovalForAll)
+				if err := _ENS.contract.UnpackLog(event, "ApprovalForAll", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseApprovalForAll is a log parse operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+//
+// Solidity: event ApprovalForAll(address indexed owner, address indexed operator, bool approved)
+func (_ENS *ENSFilterer) ParseApprovalForAll(log types.Log) (*ENSApprovalForAll, error) {
+	event := new(ENSApprovalForAll)
+	if err := _ENS.contract.UnpackLog(event, "ApprovalForAll", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// ENSNewOwnerIterator is returned from FilterNewOwner and is used to iterate over the raw logs and unpacked data for NewOwner events raised by the ENS contract.
+type ENSNewOwnerIterator struct {
+	Event *ENSNewOwner // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *ENSNewOwnerIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(ENSNewOwner)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(ENSNewOwner)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *ENSNewOwnerIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *ENSNewOwnerIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// ENSNewOwner represents a NewOwner event raised by the ENS contract.
+type ENSNewOwner struct {
+	Node  [32]byte
+	Label [32]byte
+	Owner common.Address
+	Raw   types.Log // Blockchain specific contextual infos
+}
+
+// FilterNewOwner is a free log retrieval operation binding the contract event 0xce0457fe73731f824cc272376169235128c118b49d344817417c6d108d155e82.
+//
+// Solidity: event NewOwner(bytes32 indexed node, bytes32 indexed label, address owner)
+func (_ENS *ENSFilterer) FilterNewOwner(opts *bind.FilterOpts, node [][32]byte, label [][32]byte) (*ENSNewOwnerIterator, error) {
+
+	var nodeRule []interface{}
+	for _, nodeItem := range node {
+		nodeRule = append(nodeRule, nodeItem)
+	}
+	var labelRule []interface{}
+	for _, labelItem := range label {
+		labelRule = append(labelRule, labelItem)
+	}
+
+	logs, sub, err := _ENS.contract.FilterLogs(opts, "NewOwner", nodeRule, labelRule)
+	if err != nil {
+		return nil, err
+	}
+	return &ENSNewOwnerIterator{contract: _ENS.contract, event: "NewOwner", logs: logs, sub: sub}, nil
+}
+
+// WatchNewOwner is a free log subscription operation binding the contract event 0xce0457fe73731f824cc272376169235128c118b49d344817417c6d108d155e82.
+//
+// Solidity: event NewOwner(bytes32 indexed node, bytes32 indexed label, address owner)
+func (_ENS *ENSFilterer) WatchNewOwner(opts *bind.WatchOpts, sink chan<- *ENSNewOwner, node [][32]byte, label [][32]byte) (event.Subscription, error) {
+
+	var nodeRule []interface{}
+	for _, nodeItem := range node {
+		nodeRule = append(nodeRule, nodeItem)
+	}
+	var labelRule []interface{}
+	for _, labelItem := range label {
+		labelRule = append(labelRule, labelItem)
+	}
+
+	logs, sub, err := _ENS.contract.WatchLogs(opts, "NewOwner", nodeRule, labelRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(ENSNewOwner)
+				if err := _ENS.contract.UnpackLog(event, "NewOwner", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseNewOwner is a log parse operation binding the contract event 0xce0457fe73731f824cc272376169235128c118b49d344817417c6d108d155e82.
+//
+// Solidity: event NewOwner(bytes32 indexed node, bytes32 indexed label, address owner)
+func (_ENS *ENSFilterer) ParseNewOwner(log types.Log) (*ENSNewOwner, error) {
+	event := new(ENSNewOwner)
+	if err := _ENS.contract.UnpackLog(event, "NewOwner", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// ENSNewResolverIterator is returned from FilterNewResolver and is used to iterate over the raw logs and unpacked data for NewResolver events raised by the ENS contract.
+type ENSNewResolverIterator struct {
+	Event *ENSNewResolver // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *ENSNewResolverIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(ENSNewResolver)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(ENSNewResolver)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *ENSNewResolverIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *ENSNewResolverIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// ENSNewResolver represents a NewResolver event raised by the ENS contract.
+type ENSNewResolver struct {
+	Node     [32]byte
+	Resolver common.Address
+	Raw      types.Log // Blockchain specific contextual infos
+}
+
+// FilterNewResolver is a free log retrieval operation binding the contract event 0x335721b01866dc23fbee8b6b2c7b1e14d6f05c28cd35a2c934239f94095602a0.
+//
+// Solidity: event NewResolver(bytes32 indexed node, address resolver)
+func (_ENS *ENSFilterer) FilterNewResolver(opts *bind.FilterOpts, node [][32]byte) (*ENSNewResolverIterator, error) {
+
+	var nodeRule []interface{}
+	for _, nodeItem := range node {
+		nodeRule = append(nodeRule, nodeItem)
+	}
+
+	logs, sub, err := _ENS.contract.FilterLogs(opts, "NewResolver", nodeRule)
+	if err != nil {
+		return nil, err
+	}
+	return &ENSNewResolverIterator{contract: _ENS.contract, event: "NewResolver", logs: logs, sub: sub}, nil
+}
+
+// WatchNewResolver is a free log subscription operation binding the contract event 0x335721b01866dc23fbee8b6b2c7b1e14d6f05c28cd35a2c934239f94095602a0.
+//
+// Solidity: event NewResolver(bytes32 indexed node, address resolver)
+func (_ENS *ENSFilterer) WatchNewResolver(opts *bind.WatchOpts, sink chan<- *ENSNewResolver, node [][32]byte) (event.Subscription, error) {
+
+	var nodeRule []interface{}
+	for _, nodeItem := range node {
+		nodeRule = append(nodeRule, nodeItem)
+	}
+
+	logs, sub, err := _ENS.contract.WatchLogs(opts, "NewResolver", nodeRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(ENSNewResolver)
+				if err := _ENS.contract.UnpackLog(event, "NewResolver", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseNewResolver is a log parse operation binding the contract event 0x335721b01866dc23fbee8b6b2c7b1e14d6f05c28cd35a2c934239f94095602a0.
+//
+// Solidity: event NewResolver(bytes32 indexed node, address resolver)
+func (_ENS *ENSFilterer) ParseNewResolver(log types.Log) (*ENSNewResolver, error) {
+	event := new(ENSNewResolver)
+	if err := _ENS.contract.UnpackLog(event, "NewResolver", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// ENSNewTTLIterator is returned from FilterNewTTL and is used to iterate over the raw logs and unpacked data for NewTTL events raised by the ENS contract.
+type ENSNewTTLIterator struct {
+	Event *ENSNewTTL // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *ENSNewTTLIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(ENSNewTTL)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(ENSNewTTL)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *ENSNewTTLIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *ENSNewTTLIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// ENSNewTTL represents a NewTTL event raised by the ENS contract.
+type ENSNewTTL struct {
+	Node [32]byte
+	Ttl  uint64
+	Raw  types.Log // Blockchain specific contextual infos
+}
+
+// FilterNewTTL is a free log retrieval operation binding the contract event 0x1d4f9bbfc9cab89d66e1a1562f2233ccbf1308cb4f63de2ead5787adddb8fa68.
+//
+// Solidity: event NewTTL(bytes32 indexed node, uint64 ttl)
+func (_ENS *ENSFilterer) FilterNewTTL(opts *bind.FilterOpts, node [][32]byte) (*ENSNewTTLIterator, error) {
+
+	var nodeRule []interface{}
+	for _, nodeItem := range node {
+		nodeRule = append(nodeRule, nodeItem)
+	}
+
+	logs, sub, err := _ENS.contract.FilterLogs(opts, "NewTTL", nodeRule)
+	if err != nil {
+		return nil, err
+	}
+	return &ENSNewTTLIterator{contract: _ENS.contract, event: "NewTTL", logs: logs, sub: sub}, nil
+}
+
+// WatchNewTTL is a free log subscription operation binding the contract event 0x1d4f9bbfc9cab89d66e1a1562f2233ccbf1308cb4f63de2ead5787adddb8fa68.
+//
+// Solidity: event NewTTL(bytes32 indexed node, uint64 ttl)
+func (_ENS *ENSFilterer) WatchNewTTL(opts *bind.WatchOpts, sink chan<- *ENSNewTTL, node [][32]byte) (event.Subscription, error) {
+
+	var nodeRule []interface{}
+	for _, nodeItem := range node {
+		nodeRule = append(nodeRule, nodeItem)
+	}
+
+	logs, sub, err := _ENS.contract.WatchLogs(opts, "NewTTL", nodeRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(ENSNewTTL)
+				if err := _ENS.contract.UnpackLog(event, "NewTTL", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseNewTTL is a log parse operation binding the contract event 0x1d4f9bbfc9cab89d66e1a1562f2233ccbf1308cb4f63de2ead5787adddb8fa68.
+//
+// Solidity: event NewTTL(bytes32 indexed node, uint64 ttl)
+func (_ENS *ENSFilterer) ParseNewTTL(log types.Log) (*ENSNewTTL, error) {
+	event := new(ENSNewTTL)
+	if err := _ENS.contract.UnpackLog(event, "NewTTL", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// ENSTransferIterator is returned from FilterTransfer and is used to iterate over the raw logs and unpacked data for Transfer events raised by the ENS contract.
+type ENSTransferIterator struct {
+	Event *ENSTransfer // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *ENSTransferIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(ENSTransfer)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(ENSTransfer)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *ENSTransferIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *ENSTransferIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// ENSTransfer represents a Transfer event raised by the ENS contract.
+type ENSTransfer struct {
+	Node  [32]byte
+	Owner common.Address
+	Raw   types.Log // Blockchain specific contextual infos
+}
+
+// FilterTransfer is a free log retrieval operation binding the contract event 0xd4735d920b0f87494915f556dd9b54c8f309026070caea5c737245152564d266.
+//
+// Solidity: event Transfer(bytes32 indexed node, address owner)
+func (_ENS *ENSFilterer) FilterTransfer(opts *bind.FilterOpts, node [][32]byte) (*ENSTransferIterator, error) {
+
+	var nodeRule []interface{}
+	for _, nodeItem := range node {
+		nodeRule = append(nodeRule, nodeItem)
+	}
+
+	logs, sub, err := _ENS.contract.FilterLogs(opts, "Transfer", nodeRule)
+	if err != nil {
+		return nil, err
+	}
+	return &ENSTransferIterator{contract: _ENS.contract, event: "Transfer", logs: logs, sub: sub}, nil
+}
+
+// WatchTransfer is a free log subscription operation binding the contract event 0xd4735d920b0f87494915f556dd9b54c8f309026070caea5c737245152564d266.
+//
+// Solidity: event Transfer(bytes32 indexed node, address owner)
+func (_ENS *ENSFilterer) WatchTransfer(opts *bind.WatchOpts, sink chan<- *ENSTransfer, node [][32]byte) (event.Subscription, error) {
+
+	var nodeRule []interface{}
+	for _, nodeItem := range node {
+		nodeRule = append(nodeRule, nodeItem)
+	}
+
+	logs, sub, err := _ENS.contract.WatchLogs(opts, "Transfer", nodeRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(ENSTransfer)
+				if err := _ENS.contract.UnpackLog(event, "Transfer", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseTransfer is a log parse operation binding the contract event 0xd4735d920b0f87494915f556dd9b54c8f309026070caea5c737245152564d266.
+//
+// Solidity: event Transfer(bytes32 indexed node, address owner)
+func (_ENS *ENSFilterer) ParseTransfer(log types.Log) (*ENSTransfer, error) {
+	event := new(ENSTransfer)
+	if err := _ENS.contract.UnpackLog(event, "Transfer", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
@@ -6497,19 +5814,10 @@ func (_ITextResolver *ITextResolverFilterer) ParseTextChanged(log types.Log) (*I
 
 // ResolverMetaData contains all meta data concerning the Resolver contract.
 var ResolverMetaData = &bind.MetaData{
-	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"contentType\",\"type\":\"uint256\"}],\"name\":\"ABIChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"a\",\"type\":\"address\"}],\"name\":\"AddrChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"coinType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"newAddress\",\"type\":\"bytes\"}],\"name\":\"AddressChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"hash\",\"type\":\"bytes\"}],\"name\":\"ContenthashChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"name\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"resource\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"record\",\"type\":\"bytes\"}],\"name\":\"DNSRecordChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"name\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"resource\",\"type\":\"uint16\"}],\"name\":\"DNSRecordDeleted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"DNSZoneCleared\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"lastzonehash\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"zonehash\",\"type\":\"bytes\"}],\"name\":\"DNSZonehashChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"implementer\",\"type\":\"address\"}],\"name\":\"InterfaceChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"NameChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"x\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"y\",\"type\":\"bytes32\"}],\"name\":\"PubkeyChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"string\",\"name\":\"indexedKey\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"}],\"name\":\"TextChanged\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"contentTypes\",\"type\":\"uint256\"}],\"name\":\"ABI\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"addr\",\"outputs\":[{\"internalType\":\"addresspayable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"coinType\",\"type\":\"uint256\"}],\"name\":\"addr\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"contenthash\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"resource\",\"type\":\"uint16\"}],\"name\":\"dnsRecord\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"interfaceImplementer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"pubkey\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"x\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"y\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"}],\"name\":\"text\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"zonehash\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"string\",\"name\":\"indexedKey\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"}],\"name\":\"TextChanged\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"}],\"name\":\"text\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
 	Sigs: map[string]string{
-		"2203ab56": "ABI(bytes32,uint256)",
-		"3b3b57de": "addr(bytes32)",
-		"f1cb7e06": "addr(bytes32,uint256)",
-		"bc1c58d1": "contenthash(bytes32)",
-		"a8fa5682": "dnsRecord(bytes32,bytes32,uint16)",
-		"124a319c": "interfaceImplementer(bytes32,bytes4)",
-		"691f3431": "name(bytes32)",
-		"c8690233": "pubkey(bytes32)",
 		"01ffc9a7": "supportsInterface(bytes4)",
 		"59d1d43c": "text(bytes32,string)",
-		"5c98042b": "zonehash(bytes32)",
 	},
 }
 
@@ -6663,269 +5971,6 @@ func (_Resolver *ResolverTransactorRaw) Transact(opts *bind.TransactOpts, method
 	return _Resolver.Contract.contract.Transact(opts, method, params...)
 }
 
-// ABI is a free data retrieval call binding the contract method 0x2203ab56.
-//
-// Solidity: function ABI(bytes32 node, uint256 contentTypes) view returns(uint256, bytes)
-func (_Resolver *ResolverCaller) ABI(opts *bind.CallOpts, node [32]byte, contentTypes *big.Int) (*big.Int, []byte, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "ABI", node, contentTypes)
-
-	if err != nil {
-		return *new(*big.Int), *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-	out1 := *abi.ConvertType(out[1], new([]byte)).(*[]byte)
-
-	return out0, out1, err
-
-}
-
-// ABI is a free data retrieval call binding the contract method 0x2203ab56.
-//
-// Solidity: function ABI(bytes32 node, uint256 contentTypes) view returns(uint256, bytes)
-func (_Resolver *ResolverSession) ABI(node [32]byte, contentTypes *big.Int) (*big.Int, []byte, error) {
-	return _Resolver.Contract.ABI(&_Resolver.CallOpts, node, contentTypes)
-}
-
-// ABI is a free data retrieval call binding the contract method 0x2203ab56.
-//
-// Solidity: function ABI(bytes32 node, uint256 contentTypes) view returns(uint256, bytes)
-func (_Resolver *ResolverCallerSession) ABI(node [32]byte, contentTypes *big.Int) (*big.Int, []byte, error) {
-	return _Resolver.Contract.ABI(&_Resolver.CallOpts, node, contentTypes)
-}
-
-// Addr is a free data retrieval call binding the contract method 0x3b3b57de.
-//
-// Solidity: function addr(bytes32 node) view returns(address)
-func (_Resolver *ResolverCaller) Addr(opts *bind.CallOpts, node [32]byte) (common.Address, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "addr", node)
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
-}
-
-// Addr is a free data retrieval call binding the contract method 0x3b3b57de.
-//
-// Solidity: function addr(bytes32 node) view returns(address)
-func (_Resolver *ResolverSession) Addr(node [32]byte) (common.Address, error) {
-	return _Resolver.Contract.Addr(&_Resolver.CallOpts, node)
-}
-
-// Addr is a free data retrieval call binding the contract method 0x3b3b57de.
-//
-// Solidity: function addr(bytes32 node) view returns(address)
-func (_Resolver *ResolverCallerSession) Addr(node [32]byte) (common.Address, error) {
-	return _Resolver.Contract.Addr(&_Resolver.CallOpts, node)
-}
-
-// Addr0 is a free data retrieval call binding the contract method 0xf1cb7e06.
-//
-// Solidity: function addr(bytes32 node, uint256 coinType) view returns(bytes)
-func (_Resolver *ResolverCaller) Addr0(opts *bind.CallOpts, node [32]byte, coinType *big.Int) ([]byte, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "addr0", node, coinType)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
-}
-
-// Addr0 is a free data retrieval call binding the contract method 0xf1cb7e06.
-//
-// Solidity: function addr(bytes32 node, uint256 coinType) view returns(bytes)
-func (_Resolver *ResolverSession) Addr0(node [32]byte, coinType *big.Int) ([]byte, error) {
-	return _Resolver.Contract.Addr0(&_Resolver.CallOpts, node, coinType)
-}
-
-// Addr0 is a free data retrieval call binding the contract method 0xf1cb7e06.
-//
-// Solidity: function addr(bytes32 node, uint256 coinType) view returns(bytes)
-func (_Resolver *ResolverCallerSession) Addr0(node [32]byte, coinType *big.Int) ([]byte, error) {
-	return _Resolver.Contract.Addr0(&_Resolver.CallOpts, node, coinType)
-}
-
-// Contenthash is a free data retrieval call binding the contract method 0xbc1c58d1.
-//
-// Solidity: function contenthash(bytes32 node) view returns(bytes)
-func (_Resolver *ResolverCaller) Contenthash(opts *bind.CallOpts, node [32]byte) ([]byte, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "contenthash", node)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
-}
-
-// Contenthash is a free data retrieval call binding the contract method 0xbc1c58d1.
-//
-// Solidity: function contenthash(bytes32 node) view returns(bytes)
-func (_Resolver *ResolverSession) Contenthash(node [32]byte) ([]byte, error) {
-	return _Resolver.Contract.Contenthash(&_Resolver.CallOpts, node)
-}
-
-// Contenthash is a free data retrieval call binding the contract method 0xbc1c58d1.
-//
-// Solidity: function contenthash(bytes32 node) view returns(bytes)
-func (_Resolver *ResolverCallerSession) Contenthash(node [32]byte) ([]byte, error) {
-	return _Resolver.Contract.Contenthash(&_Resolver.CallOpts, node)
-}
-
-// DnsRecord is a free data retrieval call binding the contract method 0xa8fa5682.
-//
-// Solidity: function dnsRecord(bytes32 node, bytes32 name, uint16 resource) view returns(bytes)
-func (_Resolver *ResolverCaller) DnsRecord(opts *bind.CallOpts, node [32]byte, name [32]byte, resource uint16) ([]byte, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "dnsRecord", node, name, resource)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
-}
-
-// DnsRecord is a free data retrieval call binding the contract method 0xa8fa5682.
-//
-// Solidity: function dnsRecord(bytes32 node, bytes32 name, uint16 resource) view returns(bytes)
-func (_Resolver *ResolverSession) DnsRecord(node [32]byte, name [32]byte, resource uint16) ([]byte, error) {
-	return _Resolver.Contract.DnsRecord(&_Resolver.CallOpts, node, name, resource)
-}
-
-// DnsRecord is a free data retrieval call binding the contract method 0xa8fa5682.
-//
-// Solidity: function dnsRecord(bytes32 node, bytes32 name, uint16 resource) view returns(bytes)
-func (_Resolver *ResolverCallerSession) DnsRecord(node [32]byte, name [32]byte, resource uint16) ([]byte, error) {
-	return _Resolver.Contract.DnsRecord(&_Resolver.CallOpts, node, name, resource)
-}
-
-// InterfaceImplementer is a free data retrieval call binding the contract method 0x124a319c.
-//
-// Solidity: function interfaceImplementer(bytes32 node, bytes4 interfaceID) view returns(address)
-func (_Resolver *ResolverCaller) InterfaceImplementer(opts *bind.CallOpts, node [32]byte, interfaceID [4]byte) (common.Address, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "interfaceImplementer", node, interfaceID)
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
-}
-
-// InterfaceImplementer is a free data retrieval call binding the contract method 0x124a319c.
-//
-// Solidity: function interfaceImplementer(bytes32 node, bytes4 interfaceID) view returns(address)
-func (_Resolver *ResolverSession) InterfaceImplementer(node [32]byte, interfaceID [4]byte) (common.Address, error) {
-	return _Resolver.Contract.InterfaceImplementer(&_Resolver.CallOpts, node, interfaceID)
-}
-
-// InterfaceImplementer is a free data retrieval call binding the contract method 0x124a319c.
-//
-// Solidity: function interfaceImplementer(bytes32 node, bytes4 interfaceID) view returns(address)
-func (_Resolver *ResolverCallerSession) InterfaceImplementer(node [32]byte, interfaceID [4]byte) (common.Address, error) {
-	return _Resolver.Contract.InterfaceImplementer(&_Resolver.CallOpts, node, interfaceID)
-}
-
-// Name is a free data retrieval call binding the contract method 0x691f3431.
-//
-// Solidity: function name(bytes32 node) view returns(string)
-func (_Resolver *ResolverCaller) Name(opts *bind.CallOpts, node [32]byte) (string, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "name", node)
-
-	if err != nil {
-		return *new(string), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(string)).(*string)
-
-	return out0, err
-
-}
-
-// Name is a free data retrieval call binding the contract method 0x691f3431.
-//
-// Solidity: function name(bytes32 node) view returns(string)
-func (_Resolver *ResolverSession) Name(node [32]byte) (string, error) {
-	return _Resolver.Contract.Name(&_Resolver.CallOpts, node)
-}
-
-// Name is a free data retrieval call binding the contract method 0x691f3431.
-//
-// Solidity: function name(bytes32 node) view returns(string)
-func (_Resolver *ResolverCallerSession) Name(node [32]byte) (string, error) {
-	return _Resolver.Contract.Name(&_Resolver.CallOpts, node)
-}
-
-// Pubkey is a free data retrieval call binding the contract method 0xc8690233.
-//
-// Solidity: function pubkey(bytes32 node) view returns(bytes32 x, bytes32 y)
-func (_Resolver *ResolverCaller) Pubkey(opts *bind.CallOpts, node [32]byte) (struct {
-	X [32]byte
-	Y [32]byte
-}, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "pubkey", node)
-
-	outstruct := new(struct {
-		X [32]byte
-		Y [32]byte
-	})
-	if err != nil {
-		return *outstruct, err
-	}
-
-	outstruct.X = *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
-	outstruct.Y = *abi.ConvertType(out[1], new([32]byte)).(*[32]byte)
-
-	return *outstruct, err
-
-}
-
-// Pubkey is a free data retrieval call binding the contract method 0xc8690233.
-//
-// Solidity: function pubkey(bytes32 node) view returns(bytes32 x, bytes32 y)
-func (_Resolver *ResolverSession) Pubkey(node [32]byte) (struct {
-	X [32]byte
-	Y [32]byte
-}, error) {
-	return _Resolver.Contract.Pubkey(&_Resolver.CallOpts, node)
-}
-
-// Pubkey is a free data retrieval call binding the contract method 0xc8690233.
-//
-// Solidity: function pubkey(bytes32 node) view returns(bytes32 x, bytes32 y)
-func (_Resolver *ResolverCallerSession) Pubkey(node [32]byte) (struct {
-	X [32]byte
-	Y [32]byte
-}, error) {
-	return _Resolver.Contract.Pubkey(&_Resolver.CallOpts, node)
-}
-
 // SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
 //
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
@@ -6986,1654 +6031,6 @@ func (_Resolver *ResolverSession) Text(node [32]byte, key string) (string, error
 // Solidity: function text(bytes32 node, string key) view returns(string)
 func (_Resolver *ResolverCallerSession) Text(node [32]byte, key string) (string, error) {
 	return _Resolver.Contract.Text(&_Resolver.CallOpts, node, key)
-}
-
-// Zonehash is a free data retrieval call binding the contract method 0x5c98042b.
-//
-// Solidity: function zonehash(bytes32 node) view returns(bytes)
-func (_Resolver *ResolverCaller) Zonehash(opts *bind.CallOpts, node [32]byte) ([]byte, error) {
-	var out []interface{}
-	err := _Resolver.contract.Call(opts, &out, "zonehash", node)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
-}
-
-// Zonehash is a free data retrieval call binding the contract method 0x5c98042b.
-//
-// Solidity: function zonehash(bytes32 node) view returns(bytes)
-func (_Resolver *ResolverSession) Zonehash(node [32]byte) ([]byte, error) {
-	return _Resolver.Contract.Zonehash(&_Resolver.CallOpts, node)
-}
-
-// Zonehash is a free data retrieval call binding the contract method 0x5c98042b.
-//
-// Solidity: function zonehash(bytes32 node) view returns(bytes)
-func (_Resolver *ResolverCallerSession) Zonehash(node [32]byte) ([]byte, error) {
-	return _Resolver.Contract.Zonehash(&_Resolver.CallOpts, node)
-}
-
-// ResolverABIChangedIterator is returned from FilterABIChanged and is used to iterate over the raw logs and unpacked data for ABIChanged events raised by the Resolver contract.
-type ResolverABIChangedIterator struct {
-	Event *ResolverABIChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverABIChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverABIChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverABIChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverABIChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverABIChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverABIChanged represents a ABIChanged event raised by the Resolver contract.
-type ResolverABIChanged struct {
-	Node        [32]byte
-	ContentType *big.Int
-	Raw         types.Log // Blockchain specific contextual infos
-}
-
-// FilterABIChanged is a free log retrieval operation binding the contract event 0xaa121bbeef5f32f5961a2a28966e769023910fc9479059ee3495d4c1a696efe3.
-//
-// Solidity: event ABIChanged(bytes32 indexed node, uint256 indexed contentType)
-func (_Resolver *ResolverFilterer) FilterABIChanged(opts *bind.FilterOpts, node [][32]byte, contentType []*big.Int) (*ResolverABIChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-	var contentTypeRule []interface{}
-	for _, contentTypeItem := range contentType {
-		contentTypeRule = append(contentTypeRule, contentTypeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "ABIChanged", nodeRule, contentTypeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverABIChangedIterator{contract: _Resolver.contract, event: "ABIChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchABIChanged is a free log subscription operation binding the contract event 0xaa121bbeef5f32f5961a2a28966e769023910fc9479059ee3495d4c1a696efe3.
-//
-// Solidity: event ABIChanged(bytes32 indexed node, uint256 indexed contentType)
-func (_Resolver *ResolverFilterer) WatchABIChanged(opts *bind.WatchOpts, sink chan<- *ResolverABIChanged, node [][32]byte, contentType []*big.Int) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-	var contentTypeRule []interface{}
-	for _, contentTypeItem := range contentType {
-		contentTypeRule = append(contentTypeRule, contentTypeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "ABIChanged", nodeRule, contentTypeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverABIChanged)
-				if err := _Resolver.contract.UnpackLog(event, "ABIChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseABIChanged is a log parse operation binding the contract event 0xaa121bbeef5f32f5961a2a28966e769023910fc9479059ee3495d4c1a696efe3.
-//
-// Solidity: event ABIChanged(bytes32 indexed node, uint256 indexed contentType)
-func (_Resolver *ResolverFilterer) ParseABIChanged(log types.Log) (*ResolverABIChanged, error) {
-	event := new(ResolverABIChanged)
-	if err := _Resolver.contract.UnpackLog(event, "ABIChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverAddrChangedIterator is returned from FilterAddrChanged and is used to iterate over the raw logs and unpacked data for AddrChanged events raised by the Resolver contract.
-type ResolverAddrChangedIterator struct {
-	Event *ResolverAddrChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverAddrChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverAddrChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverAddrChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverAddrChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverAddrChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverAddrChanged represents a AddrChanged event raised by the Resolver contract.
-type ResolverAddrChanged struct {
-	Node [32]byte
-	A    common.Address
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterAddrChanged is a free log retrieval operation binding the contract event 0x52d7d861f09ab3d26239d492e8968629f95e9e318cf0b73bfddc441522a15fd2.
-//
-// Solidity: event AddrChanged(bytes32 indexed node, address a)
-func (_Resolver *ResolverFilterer) FilterAddrChanged(opts *bind.FilterOpts, node [][32]byte) (*ResolverAddrChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "AddrChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverAddrChangedIterator{contract: _Resolver.contract, event: "AddrChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchAddrChanged is a free log subscription operation binding the contract event 0x52d7d861f09ab3d26239d492e8968629f95e9e318cf0b73bfddc441522a15fd2.
-//
-// Solidity: event AddrChanged(bytes32 indexed node, address a)
-func (_Resolver *ResolverFilterer) WatchAddrChanged(opts *bind.WatchOpts, sink chan<- *ResolverAddrChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "AddrChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverAddrChanged)
-				if err := _Resolver.contract.UnpackLog(event, "AddrChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseAddrChanged is a log parse operation binding the contract event 0x52d7d861f09ab3d26239d492e8968629f95e9e318cf0b73bfddc441522a15fd2.
-//
-// Solidity: event AddrChanged(bytes32 indexed node, address a)
-func (_Resolver *ResolverFilterer) ParseAddrChanged(log types.Log) (*ResolverAddrChanged, error) {
-	event := new(ResolverAddrChanged)
-	if err := _Resolver.contract.UnpackLog(event, "AddrChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverAddressChangedIterator is returned from FilterAddressChanged and is used to iterate over the raw logs and unpacked data for AddressChanged events raised by the Resolver contract.
-type ResolverAddressChangedIterator struct {
-	Event *ResolverAddressChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverAddressChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverAddressChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverAddressChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverAddressChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverAddressChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverAddressChanged represents a AddressChanged event raised by the Resolver contract.
-type ResolverAddressChanged struct {
-	Node       [32]byte
-	CoinType   *big.Int
-	NewAddress []byte
-	Raw        types.Log // Blockchain specific contextual infos
-}
-
-// FilterAddressChanged is a free log retrieval operation binding the contract event 0x65412581168e88a1e60c6459d7f44ae83ad0832e670826c05a4e2476b57af752.
-//
-// Solidity: event AddressChanged(bytes32 indexed node, uint256 coinType, bytes newAddress)
-func (_Resolver *ResolverFilterer) FilterAddressChanged(opts *bind.FilterOpts, node [][32]byte) (*ResolverAddressChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "AddressChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverAddressChangedIterator{contract: _Resolver.contract, event: "AddressChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchAddressChanged is a free log subscription operation binding the contract event 0x65412581168e88a1e60c6459d7f44ae83ad0832e670826c05a4e2476b57af752.
-//
-// Solidity: event AddressChanged(bytes32 indexed node, uint256 coinType, bytes newAddress)
-func (_Resolver *ResolverFilterer) WatchAddressChanged(opts *bind.WatchOpts, sink chan<- *ResolverAddressChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "AddressChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverAddressChanged)
-				if err := _Resolver.contract.UnpackLog(event, "AddressChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseAddressChanged is a log parse operation binding the contract event 0x65412581168e88a1e60c6459d7f44ae83ad0832e670826c05a4e2476b57af752.
-//
-// Solidity: event AddressChanged(bytes32 indexed node, uint256 coinType, bytes newAddress)
-func (_Resolver *ResolverFilterer) ParseAddressChanged(log types.Log) (*ResolverAddressChanged, error) {
-	event := new(ResolverAddressChanged)
-	if err := _Resolver.contract.UnpackLog(event, "AddressChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverContenthashChangedIterator is returned from FilterContenthashChanged and is used to iterate over the raw logs and unpacked data for ContenthashChanged events raised by the Resolver contract.
-type ResolverContenthashChangedIterator struct {
-	Event *ResolverContenthashChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverContenthashChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverContenthashChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverContenthashChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverContenthashChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverContenthashChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverContenthashChanged represents a ContenthashChanged event raised by the Resolver contract.
-type ResolverContenthashChanged struct {
-	Node [32]byte
-	Hash []byte
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterContenthashChanged is a free log retrieval operation binding the contract event 0xe379c1624ed7e714cc0937528a32359d69d5281337765313dba4e081b72d7578.
-//
-// Solidity: event ContenthashChanged(bytes32 indexed node, bytes hash)
-func (_Resolver *ResolverFilterer) FilterContenthashChanged(opts *bind.FilterOpts, node [][32]byte) (*ResolverContenthashChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "ContenthashChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverContenthashChangedIterator{contract: _Resolver.contract, event: "ContenthashChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchContenthashChanged is a free log subscription operation binding the contract event 0xe379c1624ed7e714cc0937528a32359d69d5281337765313dba4e081b72d7578.
-//
-// Solidity: event ContenthashChanged(bytes32 indexed node, bytes hash)
-func (_Resolver *ResolverFilterer) WatchContenthashChanged(opts *bind.WatchOpts, sink chan<- *ResolverContenthashChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "ContenthashChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverContenthashChanged)
-				if err := _Resolver.contract.UnpackLog(event, "ContenthashChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseContenthashChanged is a log parse operation binding the contract event 0xe379c1624ed7e714cc0937528a32359d69d5281337765313dba4e081b72d7578.
-//
-// Solidity: event ContenthashChanged(bytes32 indexed node, bytes hash)
-func (_Resolver *ResolverFilterer) ParseContenthashChanged(log types.Log) (*ResolverContenthashChanged, error) {
-	event := new(ResolverContenthashChanged)
-	if err := _Resolver.contract.UnpackLog(event, "ContenthashChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverDNSRecordChangedIterator is returned from FilterDNSRecordChanged and is used to iterate over the raw logs and unpacked data for DNSRecordChanged events raised by the Resolver contract.
-type ResolverDNSRecordChangedIterator struct {
-	Event *ResolverDNSRecordChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverDNSRecordChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverDNSRecordChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverDNSRecordChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverDNSRecordChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverDNSRecordChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverDNSRecordChanged represents a DNSRecordChanged event raised by the Resolver contract.
-type ResolverDNSRecordChanged struct {
-	Node     [32]byte
-	Name     []byte
-	Resource uint16
-	Record   []byte
-	Raw      types.Log // Blockchain specific contextual infos
-}
-
-// FilterDNSRecordChanged is a free log retrieval operation binding the contract event 0x52a608b3303a48862d07a73d82fa221318c0027fbbcfb1b2329bface3f19ff2b.
-//
-// Solidity: event DNSRecordChanged(bytes32 indexed node, bytes name, uint16 resource, bytes record)
-func (_Resolver *ResolverFilterer) FilterDNSRecordChanged(opts *bind.FilterOpts, node [][32]byte) (*ResolverDNSRecordChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "DNSRecordChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverDNSRecordChangedIterator{contract: _Resolver.contract, event: "DNSRecordChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchDNSRecordChanged is a free log subscription operation binding the contract event 0x52a608b3303a48862d07a73d82fa221318c0027fbbcfb1b2329bface3f19ff2b.
-//
-// Solidity: event DNSRecordChanged(bytes32 indexed node, bytes name, uint16 resource, bytes record)
-func (_Resolver *ResolverFilterer) WatchDNSRecordChanged(opts *bind.WatchOpts, sink chan<- *ResolverDNSRecordChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "DNSRecordChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverDNSRecordChanged)
-				if err := _Resolver.contract.UnpackLog(event, "DNSRecordChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseDNSRecordChanged is a log parse operation binding the contract event 0x52a608b3303a48862d07a73d82fa221318c0027fbbcfb1b2329bface3f19ff2b.
-//
-// Solidity: event DNSRecordChanged(bytes32 indexed node, bytes name, uint16 resource, bytes record)
-func (_Resolver *ResolverFilterer) ParseDNSRecordChanged(log types.Log) (*ResolverDNSRecordChanged, error) {
-	event := new(ResolverDNSRecordChanged)
-	if err := _Resolver.contract.UnpackLog(event, "DNSRecordChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverDNSRecordDeletedIterator is returned from FilterDNSRecordDeleted and is used to iterate over the raw logs and unpacked data for DNSRecordDeleted events raised by the Resolver contract.
-type ResolverDNSRecordDeletedIterator struct {
-	Event *ResolverDNSRecordDeleted // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverDNSRecordDeletedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverDNSRecordDeleted)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverDNSRecordDeleted)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverDNSRecordDeletedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverDNSRecordDeletedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverDNSRecordDeleted represents a DNSRecordDeleted event raised by the Resolver contract.
-type ResolverDNSRecordDeleted struct {
-	Node     [32]byte
-	Name     []byte
-	Resource uint16
-	Raw      types.Log // Blockchain specific contextual infos
-}
-
-// FilterDNSRecordDeleted is a free log retrieval operation binding the contract event 0x03528ed0c2a3ebc993b12ce3c16bb382f9c7d88ef7d8a1bf290eaf35955a1207.
-//
-// Solidity: event DNSRecordDeleted(bytes32 indexed node, bytes name, uint16 resource)
-func (_Resolver *ResolverFilterer) FilterDNSRecordDeleted(opts *bind.FilterOpts, node [][32]byte) (*ResolverDNSRecordDeletedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "DNSRecordDeleted", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverDNSRecordDeletedIterator{contract: _Resolver.contract, event: "DNSRecordDeleted", logs: logs, sub: sub}, nil
-}
-
-// WatchDNSRecordDeleted is a free log subscription operation binding the contract event 0x03528ed0c2a3ebc993b12ce3c16bb382f9c7d88ef7d8a1bf290eaf35955a1207.
-//
-// Solidity: event DNSRecordDeleted(bytes32 indexed node, bytes name, uint16 resource)
-func (_Resolver *ResolverFilterer) WatchDNSRecordDeleted(opts *bind.WatchOpts, sink chan<- *ResolverDNSRecordDeleted, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "DNSRecordDeleted", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverDNSRecordDeleted)
-				if err := _Resolver.contract.UnpackLog(event, "DNSRecordDeleted", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseDNSRecordDeleted is a log parse operation binding the contract event 0x03528ed0c2a3ebc993b12ce3c16bb382f9c7d88ef7d8a1bf290eaf35955a1207.
-//
-// Solidity: event DNSRecordDeleted(bytes32 indexed node, bytes name, uint16 resource)
-func (_Resolver *ResolverFilterer) ParseDNSRecordDeleted(log types.Log) (*ResolverDNSRecordDeleted, error) {
-	event := new(ResolverDNSRecordDeleted)
-	if err := _Resolver.contract.UnpackLog(event, "DNSRecordDeleted", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverDNSZoneClearedIterator is returned from FilterDNSZoneCleared and is used to iterate over the raw logs and unpacked data for DNSZoneCleared events raised by the Resolver contract.
-type ResolverDNSZoneClearedIterator struct {
-	Event *ResolverDNSZoneCleared // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverDNSZoneClearedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverDNSZoneCleared)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverDNSZoneCleared)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverDNSZoneClearedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverDNSZoneClearedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverDNSZoneCleared represents a DNSZoneCleared event raised by the Resolver contract.
-type ResolverDNSZoneCleared struct {
-	Node [32]byte
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterDNSZoneCleared is a free log retrieval operation binding the contract event 0xb757169b8492ca2f1c6619d9d76ce22803035c3b1d5f6930dffe7b127c1a1983.
-//
-// Solidity: event DNSZoneCleared(bytes32 indexed node)
-func (_Resolver *ResolverFilterer) FilterDNSZoneCleared(opts *bind.FilterOpts, node [][32]byte) (*ResolverDNSZoneClearedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "DNSZoneCleared", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverDNSZoneClearedIterator{contract: _Resolver.contract, event: "DNSZoneCleared", logs: logs, sub: sub}, nil
-}
-
-// WatchDNSZoneCleared is a free log subscription operation binding the contract event 0xb757169b8492ca2f1c6619d9d76ce22803035c3b1d5f6930dffe7b127c1a1983.
-//
-// Solidity: event DNSZoneCleared(bytes32 indexed node)
-func (_Resolver *ResolverFilterer) WatchDNSZoneCleared(opts *bind.WatchOpts, sink chan<- *ResolverDNSZoneCleared, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "DNSZoneCleared", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverDNSZoneCleared)
-				if err := _Resolver.contract.UnpackLog(event, "DNSZoneCleared", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseDNSZoneCleared is a log parse operation binding the contract event 0xb757169b8492ca2f1c6619d9d76ce22803035c3b1d5f6930dffe7b127c1a1983.
-//
-// Solidity: event DNSZoneCleared(bytes32 indexed node)
-func (_Resolver *ResolverFilterer) ParseDNSZoneCleared(log types.Log) (*ResolverDNSZoneCleared, error) {
-	event := new(ResolverDNSZoneCleared)
-	if err := _Resolver.contract.UnpackLog(event, "DNSZoneCleared", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverDNSZonehashChangedIterator is returned from FilterDNSZonehashChanged and is used to iterate over the raw logs and unpacked data for DNSZonehashChanged events raised by the Resolver contract.
-type ResolverDNSZonehashChangedIterator struct {
-	Event *ResolverDNSZonehashChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverDNSZonehashChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverDNSZonehashChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverDNSZonehashChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverDNSZonehashChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverDNSZonehashChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverDNSZonehashChanged represents a DNSZonehashChanged event raised by the Resolver contract.
-type ResolverDNSZonehashChanged struct {
-	Node         [32]byte
-	Lastzonehash []byte
-	Zonehash     []byte
-	Raw          types.Log // Blockchain specific contextual infos
-}
-
-// FilterDNSZonehashChanged is a free log retrieval operation binding the contract event 0x8f15ed4b723ef428f250961da8315675b507046737e19319fc1a4d81bfe87f85.
-//
-// Solidity: event DNSZonehashChanged(bytes32 indexed node, bytes lastzonehash, bytes zonehash)
-func (_Resolver *ResolverFilterer) FilterDNSZonehashChanged(opts *bind.FilterOpts, node [][32]byte) (*ResolverDNSZonehashChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "DNSZonehashChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverDNSZonehashChangedIterator{contract: _Resolver.contract, event: "DNSZonehashChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchDNSZonehashChanged is a free log subscription operation binding the contract event 0x8f15ed4b723ef428f250961da8315675b507046737e19319fc1a4d81bfe87f85.
-//
-// Solidity: event DNSZonehashChanged(bytes32 indexed node, bytes lastzonehash, bytes zonehash)
-func (_Resolver *ResolverFilterer) WatchDNSZonehashChanged(opts *bind.WatchOpts, sink chan<- *ResolverDNSZonehashChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "DNSZonehashChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverDNSZonehashChanged)
-				if err := _Resolver.contract.UnpackLog(event, "DNSZonehashChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseDNSZonehashChanged is a log parse operation binding the contract event 0x8f15ed4b723ef428f250961da8315675b507046737e19319fc1a4d81bfe87f85.
-//
-// Solidity: event DNSZonehashChanged(bytes32 indexed node, bytes lastzonehash, bytes zonehash)
-func (_Resolver *ResolverFilterer) ParseDNSZonehashChanged(log types.Log) (*ResolverDNSZonehashChanged, error) {
-	event := new(ResolverDNSZonehashChanged)
-	if err := _Resolver.contract.UnpackLog(event, "DNSZonehashChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverInterfaceChangedIterator is returned from FilterInterfaceChanged and is used to iterate over the raw logs and unpacked data for InterfaceChanged events raised by the Resolver contract.
-type ResolverInterfaceChangedIterator struct {
-	Event *ResolverInterfaceChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverInterfaceChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverInterfaceChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverInterfaceChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverInterfaceChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverInterfaceChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverInterfaceChanged represents a InterfaceChanged event raised by the Resolver contract.
-type ResolverInterfaceChanged struct {
-	Node        [32]byte
-	InterfaceID [4]byte
-	Implementer common.Address
-	Raw         types.Log // Blockchain specific contextual infos
-}
-
-// FilterInterfaceChanged is a free log retrieval operation binding the contract event 0x7c69f06bea0bdef565b709e93a147836b0063ba2dd89f02d0b7e8d931e6a6daa.
-//
-// Solidity: event InterfaceChanged(bytes32 indexed node, bytes4 indexed interfaceID, address implementer)
-func (_Resolver *ResolverFilterer) FilterInterfaceChanged(opts *bind.FilterOpts, node [][32]byte, interfaceID [][4]byte) (*ResolverInterfaceChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-	var interfaceIDRule []interface{}
-	for _, interfaceIDItem := range interfaceID {
-		interfaceIDRule = append(interfaceIDRule, interfaceIDItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "InterfaceChanged", nodeRule, interfaceIDRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverInterfaceChangedIterator{contract: _Resolver.contract, event: "InterfaceChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchInterfaceChanged is a free log subscription operation binding the contract event 0x7c69f06bea0bdef565b709e93a147836b0063ba2dd89f02d0b7e8d931e6a6daa.
-//
-// Solidity: event InterfaceChanged(bytes32 indexed node, bytes4 indexed interfaceID, address implementer)
-func (_Resolver *ResolverFilterer) WatchInterfaceChanged(opts *bind.WatchOpts, sink chan<- *ResolverInterfaceChanged, node [][32]byte, interfaceID [][4]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-	var interfaceIDRule []interface{}
-	for _, interfaceIDItem := range interfaceID {
-		interfaceIDRule = append(interfaceIDRule, interfaceIDItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "InterfaceChanged", nodeRule, interfaceIDRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverInterfaceChanged)
-				if err := _Resolver.contract.UnpackLog(event, "InterfaceChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseInterfaceChanged is a log parse operation binding the contract event 0x7c69f06bea0bdef565b709e93a147836b0063ba2dd89f02d0b7e8d931e6a6daa.
-//
-// Solidity: event InterfaceChanged(bytes32 indexed node, bytes4 indexed interfaceID, address implementer)
-func (_Resolver *ResolverFilterer) ParseInterfaceChanged(log types.Log) (*ResolverInterfaceChanged, error) {
-	event := new(ResolverInterfaceChanged)
-	if err := _Resolver.contract.UnpackLog(event, "InterfaceChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverNameChangedIterator is returned from FilterNameChanged and is used to iterate over the raw logs and unpacked data for NameChanged events raised by the Resolver contract.
-type ResolverNameChangedIterator struct {
-	Event *ResolverNameChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverNameChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverNameChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverNameChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverNameChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverNameChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverNameChanged represents a NameChanged event raised by the Resolver contract.
-type ResolverNameChanged struct {
-	Node [32]byte
-	Name string
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterNameChanged is a free log retrieval operation binding the contract event 0xb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7.
-//
-// Solidity: event NameChanged(bytes32 indexed node, string name)
-func (_Resolver *ResolverFilterer) FilterNameChanged(opts *bind.FilterOpts, node [][32]byte) (*ResolverNameChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "NameChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverNameChangedIterator{contract: _Resolver.contract, event: "NameChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchNameChanged is a free log subscription operation binding the contract event 0xb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7.
-//
-// Solidity: event NameChanged(bytes32 indexed node, string name)
-func (_Resolver *ResolverFilterer) WatchNameChanged(opts *bind.WatchOpts, sink chan<- *ResolverNameChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "NameChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverNameChanged)
-				if err := _Resolver.contract.UnpackLog(event, "NameChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseNameChanged is a log parse operation binding the contract event 0xb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7.
-//
-// Solidity: event NameChanged(bytes32 indexed node, string name)
-func (_Resolver *ResolverFilterer) ParseNameChanged(log types.Log) (*ResolverNameChanged, error) {
-	event := new(ResolverNameChanged)
-	if err := _Resolver.contract.UnpackLog(event, "NameChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// ResolverPubkeyChangedIterator is returned from FilterPubkeyChanged and is used to iterate over the raw logs and unpacked data for PubkeyChanged events raised by the Resolver contract.
-type ResolverPubkeyChangedIterator struct {
-	Event *ResolverPubkeyChanged // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *ResolverPubkeyChangedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(ResolverPubkeyChanged)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(ResolverPubkeyChanged)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *ResolverPubkeyChangedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *ResolverPubkeyChangedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// ResolverPubkeyChanged represents a PubkeyChanged event raised by the Resolver contract.
-type ResolverPubkeyChanged struct {
-	Node [32]byte
-	X    [32]byte
-	Y    [32]byte
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterPubkeyChanged is a free log retrieval operation binding the contract event 0x1d6f5e03d3f63eb58751986629a5439baee5079ff04f345becb66e23eb154e46.
-//
-// Solidity: event PubkeyChanged(bytes32 indexed node, bytes32 x, bytes32 y)
-func (_Resolver *ResolverFilterer) FilterPubkeyChanged(opts *bind.FilterOpts, node [][32]byte) (*ResolverPubkeyChangedIterator, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.FilterLogs(opts, "PubkeyChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return &ResolverPubkeyChangedIterator{contract: _Resolver.contract, event: "PubkeyChanged", logs: logs, sub: sub}, nil
-}
-
-// WatchPubkeyChanged is a free log subscription operation binding the contract event 0x1d6f5e03d3f63eb58751986629a5439baee5079ff04f345becb66e23eb154e46.
-//
-// Solidity: event PubkeyChanged(bytes32 indexed node, bytes32 x, bytes32 y)
-func (_Resolver *ResolverFilterer) WatchPubkeyChanged(opts *bind.WatchOpts, sink chan<- *ResolverPubkeyChanged, node [][32]byte) (event.Subscription, error) {
-
-	var nodeRule []interface{}
-	for _, nodeItem := range node {
-		nodeRule = append(nodeRule, nodeItem)
-	}
-
-	logs, sub, err := _Resolver.contract.WatchLogs(opts, "PubkeyChanged", nodeRule)
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(ResolverPubkeyChanged)
-				if err := _Resolver.contract.UnpackLog(event, "PubkeyChanged", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParsePubkeyChanged is a log parse operation binding the contract event 0x1d6f5e03d3f63eb58751986629a5439baee5079ff04f345becb66e23eb154e46.
-//
-// Solidity: event PubkeyChanged(bytes32 indexed node, bytes32 x, bytes32 y)
-func (_Resolver *ResolverFilterer) ParsePubkeyChanged(log types.Log) (*ResolverPubkeyChanged, error) {
-	event := new(ResolverPubkeyChanged)
-	if err := _Resolver.contract.UnpackLog(event, "PubkeyChanged", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
 }
 
 // ResolverTextChangedIterator is returned from FilterTextChanged and is used to iterate over the raw logs and unpacked data for TextChanged events raised by the Resolver contract.
