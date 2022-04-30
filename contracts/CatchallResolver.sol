@@ -52,20 +52,32 @@ contract CatchallResolver is IExtendedResolver, Resolver {
 	}
 
 	// resolve only works with resolver functions where the first argument is a bytes32 node.
+	// TODO docs
     function resolve(bytes calldata name, bytes memory data) external override view returns(bytes memory) {
-		// Return parentNode, parentResolver
+		(address r,,bytes32 node,) = resolver(name, 0);
 
 		// Replace node argument in data with parentNode
-		/* for (uint8 i = 0; i < 32; i++) { */
-		/* 	data[i+4] = parentNode[i]; */
-		/* } */
+		for (uint8 i = 0; i < 32; i++) {
+			data[i+4] = node[i];
+		}
 
-		/* (bool ok, bytes memory out) = address(parent).staticcall(data); */
-		/* if (!ok) { */
-		/* 	revert("invalid call"); */
-		/* } */
-		/* return out; */
+		(bool ok, bytes memory out) = r.staticcall(data);
+		if (!ok) {
+			revert("invalid call");
+		}
+		return out;
     }
+
+    /**
+     * @notice Returns ENSIP-10 resolver for name.
+     * @param name The name to resolve, in normalised and DNS-encoded form (eg: sub.example.eth)
+     * @return resolverAddr Found resolver for name.
+	 * @return resolverOwner DNS-encoded name which set the resolver (eg: example.eth).
+	 */
+	function resolver(bytes calldata name) public view returns(address, bytes memory) {
+		(address r,uint256 o,,) = resolver(name, 0);
+		return (r, name[o:]);
+	}
 
     function supportsInterface(bytes4 interfaceID) public pure override returns(bool) {
         return interfaceID == type(IExtendedResolver).interfaceId ||
@@ -111,17 +123,6 @@ contract CatchallResolver is IExtendedResolver, Resolver {
 	}
 	function zonehash(bytes32 node) external override view returns (bytes memory) {
 		return resolvers[node].zonehash(node);
-	}
-
-    /**
-     * @notice Returns ENSIP-10 resolver for name.
-     * @param name The name to resolve, in normalised and DNS-encoded form (eg: sub.example.eth)
-     * @return resolverAddr Found resolver for name.
-	 * @return resolverOwner DNS-encoded name which set the resolver (eg: example.eth).
-	 */
-	function resolver(bytes calldata name) public view returns(address, bytes memory) {
-		(address r,uint256 o,,) = resolver(name, 0);
-		return (r, name[o:]);
 	}
 
     /**
