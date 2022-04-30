@@ -15,18 +15,17 @@ import "./ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol";
 import "./ens-contracts/contracts/resolvers/profiles/ITextResolver.sol";
 import "./ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol";
 
-// TODO docs
 interface Resolver is
     IERC165,
-    /* IABIResolver, */
-    /* IAddressResolver, */
-    /* IAddrResolver, */
-    /* IContentHashResolver, */
-    /* IDNSRecordResolver, */
-    /* IDNSZoneResolver, */
-    /* IInterfaceResolver, */
-    /* INameResolver, */
-    /* IPubkeyResolver, */
+    IABIResolver,
+    IAddressResolver,
+    IAddrResolver,
+    IContentHashResolver,
+    IDNSRecordResolver,
+    IDNSZoneResolver,
+    IInterfaceResolver,
+    INameResolver,
+    IPubkeyResolver,
     ITextResolver {}
 
 /**
@@ -83,38 +82,36 @@ contract CatchallResolver is IExtendedResolver, Resolver {
 			interfaceID == type(ITextResolver).interfaceId;
     }
 
-	// Resolver functions are proxied to parent resolver.
-	// TODO convert all to "override" functions.
-	/* function ABI(bytes32 node, uint256 contentTypes) external view returns (uint256, bytes memory) { */
-	/* 	return parent.ABI(node, contentTypes); */
-	/* } */
-	/* function addr(bytes32 node) external view returns (address payable) { */
-	/* 	return parent.addr(node); */
-	/* } */
-	/* function addr(bytes32 node, uint coinType) external view returns(bytes memory) { */
-	/* 	return parent.addr(node, coinType); */
-	/* } */
-	/* function contenthash(bytes32 node) external view returns (bytes memory) { */
-	/* 	return parent.contenthash(node); */
-	/* } */
-	/* function dnsRecord(bytes32 node, bytes32 _name, uint16 resource) external view returns (bytes memory) { */
-	/* 	return parent.dnsRecord(node, _name, resource); */
-	/* } */
-	/* function interfaceImplementer(bytes32 node, bytes4 interfaceID) external view returns (address) { */
-	/* 	return parent.interfaceImplementer(node, interfaceID); */
-	/* } */
-	/* function name(bytes32 node) external view returns (string memory) { */
-	/* 	return parent.name(node); */
-	/* } */
-	/* function pubkey(bytes32 node) external view returns (bytes32 x, bytes32 y) { */
-	/* 	return parent.pubkey(node); */
-	/* } */
+	function ABI(bytes32 node, uint256 contentTypes) external override view returns (uint256, bytes memory) {
+		return resolvers[node].ABI(node, contentTypes);
+	}
+	function addr(bytes32 node) external override view returns (address payable) {
+		return resolvers[node].addr(node);
+	}
+	function addr(bytes32 node, uint coinType) external override view returns(bytes memory) {
+		return resolvers[node].addr(node, coinType);
+	}
+	function contenthash(bytes32 node) external override view returns (bytes memory) {
+		return resolvers[node].contenthash(node);
+	}
+	function dnsRecord(bytes32 node, bytes32 _name, uint16 resource) external override view returns (bytes memory) {
+		return resolvers[node].dnsRecord(node, _name, resource);
+	}
+	function interfaceImplementer(bytes32 node, bytes4 interfaceID) external override view returns (address) {
+		return resolvers[node].interfaceImplementer(node, interfaceID);
+	}
+	function name(bytes32 node) external override view returns (string memory) {
+		return resolvers[node].name(node);
+	}
+	function pubkey(bytes32 node) external override view returns (bytes32 x, bytes32 y) {
+		return resolvers[node].pubkey(node);
+	}
 	function text(bytes32 node, string calldata key) external override view returns (string memory) {
 		return resolvers[node].text(node, key);
 	}
-	/* function zonehash(bytes32 node) external view returns (bytes memory) { */
-	/* 	return parent.zonehash(node); */
-	/* } */
+	function zonehash(bytes32 node) external override view returns (bytes memory) {
+		return resolvers[node].zonehash(node);
+	}
 
     /**
      * @notice Returns ENSIP-10 resolver for name.
