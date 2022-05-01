@@ -2,6 +2,7 @@ package test
 
 import (
 	"testing"
+	"time"
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
@@ -92,7 +93,75 @@ func TestDirectResolver(t *testing.T) {
 }
 
 func TestSetResolver(t *testing.T) {
-	// TODO
+	chain, accts := soltest.New()
+
+	ensTest, err := enstest.New(accts[0], chain)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	catchallAddr, _, catchall, err := bindings.DeployCatchallResolver(accts[0].Auth, chain, ensTest.RegistryAddr)
+	if err != nil {
+		t.Fatal(err)
+	}
+	chain.Commit()
+
+	node, err := ensTest.RegisterETHDomain(accts[1].Addr, "royalfork")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	events, _ := bindings.NewCatchallResolverFilterer(catchallAddr, chain)
+	setResolverEvents := make(chan *bindings.CatchallResolverNewCatchallResolver)
+	sub, err := events.WatchNewCatchallResolver(nil, setResolverEvents, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer sub.Unsubscribe()
+
+	t.Run("nonowner", func(t *testing.T) {
+		if chain.Succeed(catchall.SetResolver(accts[0].Auth, node, common.Address{})) {
+			t.Error("non owner shouldn't set resolver")
+		}
+	})
+	t.Run("owner", func(t *testing.T) {
+		newResolver := common.Address{1}
+		if !chain.Succeed(catchall.SetResolver(accts[1].Auth, node, newResolver)) {
+			t.Error("owner can't set resolver")
+		}
+
+		select {
+		case evt := <-setResolverEvents:
+			if evt.Node != node {
+				t.Errorf("want NewCatchallResolver event node: %v, got: %v", node, evt.Node)
+			}
+			if evt.Resolver != newResolver {
+				t.Errorf("want NewCatchallResolver event resolver: %v, got: %v", newResolver, evt.Resolver)
+			}
+		case <-time.After(time.Second):
+			t.Error("didn't receive NewCatchallResolver event")
+		}
+	})
+	t.Run("operator", func(t *testing.T) {
+		newResolver := common.Address{2}
+		if !chain.Succeed(ensTest.Registry.SetApprovalForAll(accts[1].Auth, accts[2].Addr, true)) {
+			t.Errorf("unable to set domain operator")
+		}
+		if !chain.Succeed(catchall.SetResolver(accts[2].Auth, node, newResolver)) {
+			t.Error("operator can't set resolver")
+		}
+		select {
+		case evt := <-setResolverEvents:
+			if evt.Node != node {
+				t.Errorf("want NewCatchallResolver event node: %v, got: %v", node, evt.Node)
+			}
+			if evt.Resolver != newResolver {
+				t.Errorf("want NewCatchallResolver event resolver: %v, got: %v", newResolver, evt.Resolver)
+			}
+		case <-time.After(time.Second):
+			t.Error("didn't receive NewCatchallResolver event")
+		}
+	})
 }
 
 func TestResolve(t *testing.T) {
@@ -119,6 +188,12 @@ func TestResolve(t *testing.T) {
 	}
 
 	domain := "sub.royalfork.eth"
+
+	subNode, err := util.NameHash(domain)
+	if err != nil {
+		t.Fatal(err)
+	}
+
 	encDomain, err := util.DNSEncode(domain)
 	if err != nil {
 		t.Fatal(err)
@@ -147,7 +222,7 @@ func TestResolve(t *testing.T) {
 			t.Fatal("unable to set addr")
 		}
 
-		data, err := abi.Pack("addr", [32]byte{})
+		data, err := abi.Pack("addr", subNode)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -171,7 +246,7 @@ func TestResolve(t *testing.T) {
 			t.Fatal("unable to set addr")
 		}
 
-		data, err := abi.Pack("text", [32]byte{}, "key")
+		data, err := abi.Pack("text", subNode, "key")
 		if err != nil {
 			t.Fatal(err)
 		}

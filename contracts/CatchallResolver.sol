@@ -39,29 +39,31 @@ contract CatchallResolver is IExtendedResolver, Resolver {
 
     mapping(bytes32=>Resolver) resolvers;
 
+    event NewCatchallResolver(bytes32 indexed node, address resolver);
+
     constructor(address _registry) {
         registry = ENS(_registry);
     }
 
 	// TODO docs
-	// TODO tests
 	function setResolver(bytes32 _node, Resolver _resolver) public {
         address owner = registry.owner(_node);
         require(owner == msg.sender || registry.isApprovedForAll(owner, msg.sender));
 		resolvers[_node] = _resolver;
+		emit NewCatchallResolver(_node, address(_resolver));
 	}
 
 	// resolve only works with resolver functions where the first argument is a bytes32 node.
 	// TODO docs
-    function resolve(bytes calldata name, bytes memory data) external override view returns(bytes memory) {
-		(address r,,bytes32 node,) = resolver(name, 0);
+    function resolve(bytes calldata _name, bytes memory _data) external override view returns(bytes memory) {
+		(address r,,bytes32 node,) = resolver(_name, 0);
 
 		// Replace node argument in data with parentNode
 		for (uint8 i = 0; i < 32; i++) {
-			data[i+4] = node[i];
+			_data[i+4] = node[i];
 		}
 
-		(bool ok, bytes memory out) = r.staticcall(data);
+		(bool ok, bytes memory out) = r.staticcall(_data);
 		if (!ok) {
 			revert("invalid call");
 		}
@@ -70,13 +72,13 @@ contract CatchallResolver is IExtendedResolver, Resolver {
 
     /**
      * @notice Returns ENSIP-10 resolver for name.
-     * @param name The name to resolve, in normalised and DNS-encoded form (eg: sub.example.eth)
+     * @param _name The name to resolve, in normalised and DNS-encoded form (eg: sub.example.eth)
      * @return resolverAddr Found resolver for name.
 	 * @return resolverOwner DNS-encoded name which set the resolver (eg: example.eth).
 	 */
-	function resolver(bytes calldata name) public view returns(address, bytes memory) {
-		(address r,uint256 o,,) = resolver(name, 0);
-		return (r, name[o:]);
+	function resolver(bytes calldata _name) public view returns(address, bytes memory) {
+		(address r,uint256 o,,) = resolver(_name, 0);
+		return (r, _name[o:]);
 	}
 
     function supportsInterface(bytes4 interfaceID) public pure override returns(bool) {
@@ -127,9 +129,9 @@ contract CatchallResolver is IExtendedResolver, Resolver {
 
     /**
      * @dev Performs recursive ENSIP-10 lookup for a catchall resolver.
-     * @param name The name to resolve, in normalised and DNS-encoded
+     * @param _name The name to resolve, in normalised and DNS-encoded
      *        form (eg: sub.example.eth)
-     * @param offset The offset within name on which a catchall
+     * @param _offset The offset within name on which a catchall
      *        resolver lookup is performed.
      * @return resolverAddr Found resolver for name.
      * @return resolverNameOffset Domain at this offset within name
@@ -137,18 +139,18 @@ contract CatchallResolver is IExtendedResolver, Resolver {
      * @return resolverNode Namehash of name[resolverNameOffset:].
      * @return node Namehash of name.
      */
-    function resolver(bytes calldata name, uint256 offset) internal view returns(address, uint256, bytes32, bytes32) {
-        uint256 labelLength = uint256(uint8(name[offset]));
+    function resolver(bytes calldata _name, uint256 _offset) internal view returns(address, uint256, bytes32, bytes32) {
+        uint256 labelLength = uint256(uint8(_name[_offset]));
         if(labelLength == 0) {
-            return (address(0), name.length, bytes32(0), bytes32(0));
+            return (address(0), _name.length, bytes32(0), bytes32(0));
         }
-        uint256 nextLabel = offset + labelLength + 1;
-        bytes32 labelHash = keccak256(name[offset + 1: nextLabel]);
-        (address r, uint256 roffset, bytes32 rnode, bytes32 parentnode) = resolver(name, nextLabel);
+        uint256 nextLabel = _offset + labelLength + 1;
+        bytes32 labelHash = keccak256(_name[_offset + 1: nextLabel]);
+        (address r, uint256 roffset, bytes32 rnode, bytes32 parentnode) = resolver(_name, nextLabel);
         bytes32 node = keccak256(abi.encodePacked(parentnode, labelHash));
         address newr = address(resolvers[node]);
         if(newr != address(0)) {
-            return (newr, offset, node, node);
+            return (newr, _offset, node, node);
         }
         return (r, roffset, rnode, node);
     }
