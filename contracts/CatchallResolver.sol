@@ -31,7 +31,7 @@ interface Resolver is
 /**
  * @title Catch-all ENSIP-10 resolver.
  * @author royalfork.eth
- * @notice Resolver shim which proxies all resolver functions for any
+ * @notice ENS resolver which proxies all resolver functions for any
  *         subdomain of a node to a set resolver.
  */
 contract CatchallResolver is IExtendedResolver, Resolver {
@@ -45,7 +45,14 @@ contract CatchallResolver is IExtendedResolver, Resolver {
         registry = ENS(_registry);
     }
 
-	// TODO docs
+    /**
+     * @notice Set catchall resolver for node.  Node and all of its
+     *         subdomains will use this resolver.  Message sender must
+     *         be owner or operator for node.
+     * @param _node Catchall resolver will be set for this node.
+     * @param _resolver Catchall reoslver proxies all resolver
+     *        functions to this address.
+	 */
 	function setResolver(bytes32 _node, Resolver _resolver) public {
         address owner = registry.owner(_node);
         require(owner == msg.sender || registry.isApprovedForAll(owner, msg.sender));
@@ -53,8 +60,16 @@ contract CatchallResolver is IExtendedResolver, Resolver {
 		emit NewCatchallResolver(_node, address(_resolver));
 	}
 
-	// resolve only works with resolver functions where the first argument is a bytes32 node.
-	// TODO docs
+    /**
+	 * @notice ENSIP-10 defined wildcard resolution function.
+     * @dev Resolve only works with resolver functions where the first
+     *      argument is a bytes32 node (as of ENSIP-12, all resolver
+     *      functions meet this criteria).
+	 * @param _name DNS-encoded name to be resolved.
+	 * @param _data ABI-encoded calldata for a resolver function.
+	 * @return output ABI-encoded return output from function encoded
+	 *         by _data.
+	 */
     function resolve(bytes calldata _name, bytes memory _data) external override view returns(bytes memory) {
 		(address r,,bytes32 node,) = resolver(_name, 0);
 
