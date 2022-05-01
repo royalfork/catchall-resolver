@@ -1,6 +1,24 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
+/*               .:  :.                                                  */
+/*             :--    :-:             _______  _        _______          */
+/*           -==-      :==-.         (  ____ \( (    /|(  ____ \         */
+/*         . ==:        .===:        | (    \/|  \  ( || (    \/         */
+/*         +-..           -++        | (__    |   \ | || (_____          */
+/*         ++=           ..-+        |  __)   | (\ \) |(_____  )         */
+/*         -*++.        :++ :        | (      | | \   |      ) |         */
+/*          :+**:      =**=          | (____/\| )  \  |/\____) |         */
+/*            .-+=   .+*-.           (_______/|/    )_)\_______)         */
+/*               :-  =:                                                  */
+/*  )   ___                            _____                             */
+/* (__/_____)          /)       /) /) (, /   )            /)             */
+/*   /       _  _/_ _ (/   _   // //    /__ /  _  _   ___// _ _   _  __  */
+/*  /       (_(_(__(__/ )_(_(_(/_(/_ ) /   \__(/_/_)_(_)(/_ (/___(/_/ (_ */
+/* (______)                         (_/                                  */
+/*                                                     by: royalfork.eth */
+/*                            0xca7c4a117baef1b7a122d55ede7216ba6631ac3e */
+
 import "./openzeppelin/contracts/utils/introspection/IERC165.sol";
 import "./ens-contracts/contracts/registry/ENS.sol";
 import "./ens-contracts/contracts/resolvers/profiles/IABIResolver.sol";
